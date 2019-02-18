@@ -1,0 +1,145 @@
+<!-- eventos main content init -->
+{% set hierarquia = content['field_hierarquia'][0]['#title'] %}
+{% set lugar      = content['field_evento_endereco'][0]['organization']['#value'] %}
+{% set endereco   = content['field_evento_endereco'][0]['address_line1']['#value'] %}
+{% set bairro     = content['field_evento_endereco'][0]['dependent_locality']['#value'] %}
+<main class="main">
+  <section class="internas-top-header">
+  <div class="inner wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+            <h1 class="title-page">
+                {% trans %}difusão científica{% endtrans %}
+              <span class="sub-title"><a href="/{{ language }}/difusao-cientifica">{% trans %}seminários e agenda{% endtrans %}</a></span>
+              <span class="sub-title">{{  label }}</span>
+            </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="eventos-main">
+
+  <div class="inner wrapper">
+    <div class="container-fluid">
+      <div class="col-md-9 col-xs-12">
+        <div class="evento-header">
+          <h2 class="evento-title">{{ label }}</h2>
+          <span class="evento-data">
+              {{  drupal_field('field_evento_data_completa','node') }}
+          </span>
+        </div>
+        <div class="evento-text internas-text">
+
+            {{  drupal_field('field_evento_descricao','node') }}
+
+        </div>
+
+        <div class="evento-share">
+          <div class="social">
+            <ul>
+              <li class="text">Compartilhar</li>
+              <li class="icon-linkedin"><a href="#"><span>linkedin</span></a></li>
+              <li class="icon-facebook"><a href="#"><span>facebook</span></a></li>
+              <li class="icon-twitter"><a href="#"><span>twitter</span></a></li>
+              <li class="icon-email"><a href="#"><span>email</span></a></li>
+              <li class="facebook-like">
+
+                <div id="fb-root"></div>
+                <script>
+                    (function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.0';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                </script>
+                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-3 col-xs-12">
+
+        <!-- box inscricao init -->
+        {% if (categoria == 3) or (categoria == 247) %}
+          <div class="side-bar-box inscricoes">
+            <div class="box">
+              <div class="line">
+                <a href="/{{ lang }}/form/cadastro-curso?categoria={{ categoria }}" class="btn-continuar">{% trans %}Inscrição{% endtrans %}</a>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+        <!-- box inscricao end -->
+        <!-- side bar enderecos init -->
+        {% if endereco %}
+          <div class="side-bar-box">
+                <div class="header icon-endereco bg-black">{% trans %}Endereços{% endtrans %}</div>
+            <div class="box bg-light">
+              <!-- endereco item init -->
+              <div class="contato-endereco">
+                <h4 class="title">{{ lugar }}</h4>
+                <p>{{ endereco }}</p>
+                <p>{{ bairro }}</p>
+              </div>
+              <!-- endereco item end -->
+            </div>
+          </div>
+        {% endif %}
+        <!-- side bar enderecos end -->
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- fotos do eventoinit -->
+<div class="container-fluid evento-slider-foto-container">
+  <div class="row">
+    <div class="col-xs-12 wrapper">
+      <!-- eventos foto slider init init -->
+        {{  drupal_field('field_evento_conteudo','node') }}
+      <section class="evento-fotos-slider">
+        <div class="evento-fotos-slider-header">
+          <h2>Fotos do evento:</h2>
+        </div>
+        <div class="evento-fotos-slider-box">
+          <div class="row">
+              {{ drupal_view('evento','galeria_eventos',language) }}
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+<section class="internas-container">
+  <div class="inner wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- evento content init -->
+
+
+
+
+        <div class="col-xs-12 internas-text">
+            {{  drupal_field('field_evento_observacoes','node') }}
+            {% if (categoria == 3) or (categoria == 247) %}
+              <a href="/{{ lang }}/form/cadastro-curso?categoria={{ categoria }}" class="evento-btn btn-inscricao">{% trans %}Clique aqui para fazer a inscrição{% endtrans %}</a>
+            {% endif %}
+          <a href="/{{ lang }}/difusao-cientifica" class="evento-btn btn-voltar">{% trans %}voltar para seminário e agenda{% endtrans %}</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- eventos main content end -->

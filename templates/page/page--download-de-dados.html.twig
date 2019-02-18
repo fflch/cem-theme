@@ -1,0 +1,94 @@
+<main class="main">
+    <!-- internas top header init -->
+
+    <section class="internas-top-header">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="title-page">{% trans %}download de dados{% endtrans %}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="internas-container">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row quem-somos-content">
+                    <!-- quem somos main content init -->
+                    <div class="col-md-4 col-xs-12 que-somos-menu-col">
+                        <div class="block-facet--checkbox">
+                            {% trans %}<h2>Tipos</h2>{% endtrans %}
+                        </div>
+                        {{ drupal_entity('block','facets_tipos') }}
+                        <div class="block-facet--checkbox">
+                            {% trans %}<h2>Temas</h2>{% endtrans %}
+                        </div>
+                        {{ drupal_entity('block','facets_temas') }}
+                        {# drupal_entity('block','facets_fontes') #}
+                        {# drupal_entity('block','tags') #}
+                        {{ drupal_entity('block','cursosdocem') }}
+                    </div>
+
+                    <div class="col-md-8 col-xs-12 quem-somos-conteudo-col">
+                        <div class="header-search publicoes-search">
+                           {{ drupal_entity('block','formularioexpostobuscadownload_de_dados') }}
+                        </div>
+                        <div class="row quem-somos-perfis-content">
+                            {{ drupal_view('busca','download_de_dados',language_page) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<!-- internas container init -->
+<section class="internas-container">
+    <div class="inner wrapper">
+        <div class="container-fluid">
+            <div class="row quem-somos-content">
+                <div class="col-xs-12">
+                    <section class="home-apoio">
+                        {% trans %}
+                        <div class="title">apoio</div>
+                        {% endtrans %}
+                        <div class="logos">
+                            {{ drupal_entity('block','apoio') }}
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <!-- footer newsletter init -->
+    <section class="footer-newsletter">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="footer-newsletter-form">
+
+                            <div>
+                                {{ drupal_entity('block','webform') }}
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="footer-newsletter-text">
+                            {% trans %}
+                            <span>RECEBA NOSSOS INFORMATIVOS</span><br> Não se preocupe, também não gostamos de SPAM.
+                            {% endtrans %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>

@@ -1,0 +1,135 @@
+{% set autor_livro  = content['field_publicacoes_autores'][0]['#context']['value'] %}
+
+{% macro menuMacro(menu, level) -%}
+    {# Set our default level as an integer. #}
+    {% set default_level = 1 %}
+    <ul class=”menu-level--{{ level|default(default_level) }}”>
+        {% for menu_item in menu %}
+            {# Check if this is the active item. #}
+            {% set active = (menu_item.active) ? ' is-active' : '' %}
+            {# Check if this item is in the active trail. #}
+            {% set active = active ~ ((menu_item.active_trail) ? ' is-active-trail' : '') %}
+            <li class=”menu__item{{ active }}”>
+                <a href="{{ menu_item.url }}"  class=”menu__link{{ active }}”>{{ menu_item.text }}</a>
+                {% if menu_item.submenu %}
+                    {# Since this menu item has a submenu, recall function and increment counter. #}
+                    {{ _self.menuMacro(menu_item.submenu, level|default(default_level) + 1) }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{%- endmacro %}
+<main class="main">
+    <!-- internas top header init -->
+    <section class="internas-top-header">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="breadcrumb">
+                            <a href="/noticias">{% trans %}publicações{% endtrans %}</a>
+                            <a href="#">{{ label }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="internas-container">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row quem-somos-content">
+                    <!-- quem somos main content init -->
+                    <div class="col-md-4 col-xs-12 que-somos-menu-col">
+                        {% set items = simplify_menu('menu-lateral-publicacoes') %}
+                        <div class="quem-somos-menu">
+                            <ul>
+                                {% for menu_item in items.menu_tree %}
+                                    {% if menu_item.submenu %}
+                                        <li class="drop-down"><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
+                                    {% else %}
+                                        <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
+                                    {% endif %}
+                                    {% if menu_item.submenu %}
+                                        {% set subMenuAttribute = "drop-down" %}
+                                        <ul>
+                                            {% for itemSub in menu_item.submenu %}
+                                                <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-xs-12 quem-somos-conteudo-col quem-somos-conteudo">
+
+                        <!-- publicacoes livros interna init -->
+                        <div class="publicacoes-livros-interna">
+                            {%  if imagem_livro %}
+                                <div class="livro-display">
+                                    <div class="image">
+                                        <a href="#">
+                                            <img src="{{ imagem_livro }}">
+                                        </a>
+                                    </div>
+                                    <div class="actions">
+                                        <ul>
+                                            {% if link_livro %}
+                                                <li class="buy"><a href="{{ link_livro }}">comprar</a></li>
+                                            {% endif %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {{  drupal_field('field_infor','node') }}
+                            <table width="100%" cellpadding="0" cellspacing="0" class="livro-infos">
+                                <tr>
+                                    <td class="header" colspan="2">{% trans %}Ficha Técnica{% endtrans %}</td>
+                                </tr>
+                                {% if autor_livro %}
+                                    <tr>
+                                        <td class="key">{% trans %}Autor{% endtrans %}</td>
+                                        <td class="value">{{  drupal_field('field_publicacoes_autores','node') }}</td>
+                                    </tr>
+                                {% endif %}
+
+                                <tr>
+                                    <td class="key">{% trans %}Título{% endtrans %}</td>
+                                    <td class="value">{{ label }}</td>
+                                </tr>
+                                   <tr>
+                                    <td class="key">{% trans %}Ano{% endtrans %}</td>
+                                    <td class="value">{{  drupal_field('field_ano_de_publicacao','node') }}</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="key">{% trans %}Citação{% endtrans %}</td>
+                                    <td class="value">{{  drupal_field('body','node') }}</td>
+                                </tr>
+                                {% if link_resenha %}
+                                    <tr>
+                                        <td class="key">{% trans %}Resenha{% endtrans %}</td>
+                                        <td class="value"><a href="{{ link_resenha }}">{% trans %}clique aqui{% endtrans %}</a></td>
+                                    </tr>
+                                {% endif %}
+                                {% if anexos_livro %}
+                                    <tr>
+                                        <td class="key">{% trans %}Anexos{% endtrans %}</td>
+                                        <td class="value"><a href="{{  anexos_livro }}">{% trans %}clique aqui{% endtrans %}</a></td>
+                                    </tr>
+                                {% endif %}
+                            </table>
+                            <a href="/{{ language }}/publicacoes/livros" class="btn-voltar">{% trans %}voltar para livros{% endtrans %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+

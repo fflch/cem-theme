@@ -1,0 +1,157 @@
+<?php
+/**
+* Implements hook_blog_preprocess_html().
+*/
+use Drupal\taxonomy\Entity\Term;
+
+function cem_preprocess_html(&$variables) {
+
+//  $node = \Drupal::entityTypeManager()->getStorage('node')->load(25);
+//  $variables['descricao'] = $node->get('field_page_descricao')->getValue()[0]['value'];
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['language'] = $language;
+}
+
+function cem_preprocess_node(&$variables) {
+
+  $tipo = $variables['node']->getType();
+  $lang = $variables['node']->language()->getId();
+  $variables['language'] = $lang;
+
+  if($variables['node']->id() == 58){
+      date_default_timezone_set('UTC');
+
+      $variables['agenda_ano']          = date("Y");
+      $variables['agenda_mes_numerico'] = date("m");
+      $variables['agenda_dia']          = date("d");
+
+      if($lang == 'pt-br'){
+          setlocale(LC_TIME, "pt_BR.utf8");
+          $variables['agenda_mes_texto'] = strftime('%B');
+      }
+      if($lang == 'en'){
+          setlocale(LC_TIME, "english");
+          $variables['agenda_mes_texto'] = strftime('%B');
+      }
+  }
+  if($tipo == 'livros') {
+        if(isset($variables['node']->get('field_publicacoes_thumbnail')->entity->uri->value)){
+            $variables['imagem_livro'] = file_create_url($variables['node']->get('field_publicacoes_thumbnail')->entity->uri->value);
+
+        }
+        if(isset($variables['node']->get('field_publicacoes_arquivo')->entity->uri->value)) {
+            $variables['anexos_livro'] = file_create_url($variables['node']->get('field_publicacoes_arquivo')->entity->uri->value);
+        }
+      $variables['link_resenha'] = $variables['node']->get('field_publicacoes_link')->getString();
+      $variables['link_livro']   = $variables['node']->get('field_link_comprar_livro')->getString();
+
+  }
+  if($tipo == 'agenda') {
+    $variables['lang'] = isset($lang) ? $lang : 'pt-br';
+    $data      = $variables['node']->get('field_evento_data')->getString();
+    $variables['categoria'] = $variables['node']->get('field_categoria')->getString();
+    $data = explode(', ',$data);
+    $data_ini = strtotime('-3 hour',strtotime($data[0]));
+    
+    if(isset($data[1])){
+      $data_fim = strtotime('-3 hour',strtotime($data[1]));
+    }
+    if($lang == 'pt-br'){
+      setlocale(LC_TIME, "pt_BR.utf8");
+      if(isset($data[1])){
+        if(date('Y-m-d', $data_ini) == date('Y-m-d', $data_fim)){
+          $variables['data_evento'] =  strftime('%d de %B de %Y %Hh%M', $data_ini) . ' - '. strftime('%Hh%M', $data_fim);
+        }else{
+          $variables['data_evento'] =  strftime('%d de %B de %Y %Hh%M', $data_ini) . ' a ' . strftime('%d de %B de %Y %Hh%M', $data_fim);
+        }
+      }else{
+        $variables['data_evento'] =  strftime('%d de %B de %Y %Hh%M', $data_ini);
+      }
+    }else{
+      setlocale(LC_TIME, "english");
+      if(isset($data[1])){
+        if(date('Y-m-d', $data_ini) == date('Y-m-d', $data_fim)){
+          $variables['data_evento'] =  strftime('%d of %B of %Y %Hh%M', $data_ini) . ' - '. strftime('%Hh%M', $data_fim);
+        }else{
+          $variables['data_evento'] =  strftime('%d of %B of %Y %Hh%M', $data_ini) . ' until ' . strftime('%d of %B de %Y %Hh%M', $data_fim);
+        }
+      }else{
+        $variables['data_evento'] =  strftime('%d of %B of %Y %Hh%M', $data_ini);
+      }
+    }
+  }
+  if($tipo == 'pessoas') {
+    $tid = $variables['node']->get('field_pesquisadores')
+      ->getValue()[0]['target_id'];
+    $variables['pesquisadores'] = Term::load($tid)->getName();
+    $variables['term_url']      = Term::load($tid)->url();
+  }
+  if($tipo == 'page') {
+    $url  = $_SERVER['REQUEST_URI'];
+    $path = explode('/', $url);
+    if(isset($path[3])){
+         $variables['tipo_publicacao'] = $path[3];
+    }
+  }
+  if(isset($_GET['month']) && isset($_GET['year'])) {
+    $variables['get']['month'] = \Drupal\Component\Utility\XSS::filter($_GET['month']);
+    $variables['get']['year'] = \Drupal\Component\Utility\XSS::filter($_GET['year']);
+  }else{
+    $variables['get']['month'] = Null;
+    $variables['get']['year']  = Null;
+  }
+}
+
+function cem_preprocess_page(&$variables) {
+
+    $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    if(isset($language)){
+        $variables['language_page'] = $language;
+    }
+    if(isset($variables['node'])){
+    if($variables['node']->getType() == 'resolution') {
+      $variables['descricao'] = $variables['node']->get('body')->getValue()[0]['value'];
+      //SP
+      $variables['img_sp'] = file_create_url($variables['node']->get('field_image')->entity->uri->value);
+      //Londres
+      $variables['img_londres'] = file_create_url($variables['node']->get('field_imagem')->entity->uri->value);
+    }
+  }
+  $variables['ano'] = isset($_GET['ano']) ? $_GET['ano'] : 'all';
+ // $variables['hierarquia'] = $variables['node']->get('field_hierarquia')->getString();
+
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function cem_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    $suggestions[] = 'page__'.$content_type;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function cem_theme_suggestions_html_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    $suggestions[] = 'html__'.$content_type;
+  }
+}
+
+function cem_preprocess_links__language_block(&$variables) {
+    $url = $_SERVER['REQUEST_URI'];
+    $lang = explode('/', $url);
+    if($lang[1] == 'pt-br') {
+      $variables['links']['en']['link']['#title'] = '(english)';
+      unset($variables['links']['pt-br']);
+    }else {
+      $variables['links']['pt-br']['link']['#title'] = '(português)';
+      unset($variables['links']['en']);
+    }
+}
+
+

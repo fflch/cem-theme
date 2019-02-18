@@ -1,0 +1,112 @@
+<main class="main">
+    <!-- internas top header init -->
+    <section class="internas-top-header">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="title-page"><a href="/node/27">{% trans %}quem somos{% endtrans %}</a>
+                            <span class="sub-title"><a href="/node/115">{% trans %}nossa equipe{% endtrans %}</a></span>
+                            {#<span class="sub-title"><a href="{{ term_url }}">{{ pesquisadores }}</a></span>#}
+                            <span class="sub-title"><a href="#">{{ label }}</a></span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- internas top header end -->
+    <!-- internas container init -->
+    <section class="internas-container">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- coordenador main content init -->
+                    <div class="col-xs-12 coordenador-perfil-main-content">
+                        <div class="row perfil-and-biografia">
+
+                            <div class="col-md-3">
+                                <div class="coordenador-box-perfil">
+                                    <div class="image">
+                                        <a href="#">{{ drupal_field('field_pessoas_foto','node') }}</a>
+                                    </div>
+                                    <div class="title">
+                                        <a href="#">{{ label }}</a>
+                                    </div>
+                                    <div class="links">
+                                        {% if node.field_pessoa_email.value %}
+                                            <a href="mailto:{{ node.field_pessoa_email.value }}" class="email">{{ node.field_pessoa_email.value }}</a>
+                                        {% endif %}
+                                        {% if node.field_site.value %}
+                                            <a href="{{ node.field_site.value }}" class="website">{{ node.field_site.value }}</a>
+                                        {% endif %}
+                                        {% if node.field_lattes.value %}
+                                            <a href="{{ node.field_lattes.value[0]['uri'] }}" class="lattes">{% trans %}currículo lattes{% endtrans %}</a>
+                                        {% endif %}
+                                    </div>
+                                    <div class="social">
+                                        <ul>
+                                            {% if node.field_linkedin.value %}
+                                                <li class="icon-linkedin"><a href=" {{ node.field_lattes.value[0]['uri'] }} "><span>linkedin</span></a></li>
+                                            {% endif %}
+                                            {% if node.field_facebook.value %}
+                                                <li class="icon-facebook"><a href="{{ node.field_facebook.value[0]['uri'] }}"><span>facebook</span></a></li>
+                                            {% endif %}
+                                            {% if node.field_twitter.value %}
+                                                <li class="icon-twitter"><a href="{{ node.field_twitter.value[0]['uri'] }}"><span>twitter</span></a></li>
+                                            {% endif %}
+                                            {% if node.field_instagram.value %}
+                                                <li class="icon-instagram"><a href="{{ node.field_instagram.value[0]['uri'] }}"><span>instagram</span></a></li>
+                                            {% endif %}
+                                            {% if node.field_site.value %}
+                                                <li class="icon-site"><a href="{{ node.field_site.value }}"><span>site</span></a></li>
+                                            {% endif %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <!-- biografia init -->
+                                {% if node.field_pessoa_biografia.value %}
+                                    <div class="coordenador-box-infos">
+                                        <div class="title icon icon-biografia">
+                                            {% trans %}
+                                                <h3>Biografia</h3>
+                                            {% endtrans %}
+                                            {{  drupal_field('field_pessoa_biografia','node') }}
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                <!-- gravacoes, palestras init -->
+                                {% if node.field_pessoa_gravacoes.value %}
+                                    <div class="coordenador-box-infos">
+                                        <div class="title icon icon-medias">
+                                            {% trans %}
+                                                <h3>Gravação de seminários, palestras</h3>
+                                            {% endtrans %}
+                                        </div>
+                                        {{  drupal_field('field_pessoa_gravacoes','node') }}
+                                    </div>
+                                {% endif %}
+                                <!-- gravacoes, palestras end -->
+                                <!-- books init -->
+                                {% if node.field_pessoa_producoes.value %}
+                                <div class="coordenador-box-infos">
+                                    <div class="title icon icon-books">
+                                        {% trans %}
+                                            <h3>Produção mais recente(*)</h3>
+                                        {% endtrans %}
+                                    </div>
+                                    {{  drupal_field('field_pessoa_producoes','node') }}
+                                </div>
+                                {% endif %}
+                                <!-- books end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>

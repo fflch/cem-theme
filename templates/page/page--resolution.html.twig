@@ -1,0 +1,100 @@
+{% set language = language.getId() %}
+<main class="main">
+    <!-- resolution header init -->
+    <div class="resolution-header">
+        <div class="inner wrapper">
+            <div class="resolution-logos-container">
+                <div class="container-fluid">
+                    <div class="row">
+                        {{ drupal_entity('block_content','9') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="resolution-menu">
+            <div class="inner wrapper">
+                {{ drupal_menu('menu-resolution') }}
+            </div>
+        </nav>
+    </div>
+
+    <!-- resolution header end -->
+    <!-- resolution maps init -->
+    <div class="resolution-maps">
+        <div class="inner wrapper">
+            <div class="maps-container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-12">
+                            <div class="map-box">
+                                <span class="title">(Londres)</span>
+                                <iframe src="{{ img_sp }}" width="100%" height="100%" border="0" scrolling="no"></iframe>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12">
+                            <div class="map-box">
+                                <span class="title">(São Paulo)</span>
+                                <iframe src="{{ img_londres }}" width="100%" height="100%" border="0" scrolling="no"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mapping-box">
+                <h3 class="title">Mapping</h3>
+                {% trans %}
+                    <p>This is the excerpt for your very first post.</p>
+                {% endtrans %}
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+    </div>
+    <!-- resolution maps end -->
+    <!-- internas container init -->
+    <section class="internas-container">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- resolution content coluna left init -->
+                    <div class="col-md-9 col-xs-12">
+                        <div class="internas-title-with-sub">
+                            <span class="pre">about</span>
+                            <h2>Resolution</h2>
+                        </div>
+                        <div class="internas-text">
+                            {% autoescape false %}
+                               {{ descricao }}
+                            {% endautoescape %}
+                            <a href="#" class="btn">read more</a>
+                        </div>
+                    </div>
+                    <!-- resolution content coluna left end -->
+                    <!-- resolution content coluna right init -->
+                    <div class="col-md-3 col-xs-12">
+
+                        <!-- side bar agenda init -->
+                        <div class="side-bar-box resolution-slider">
+                            {% trans %}
+                                <div class="header">PUBLICATIONS</div>
+                            {% endtrans %}
+                            <div class="box">
+                                <div class="resolution-slider">
+                                    <div class="views-element-container">
+                                        <div>
+                                            <!-- side bar evento item init -->
+                                            {{ drupal_view('publicacao','bloco_publicacao_resolution',language) }}
+                                            <!-- side bar evento item end -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- side bar agenda end -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- internas container begin -->
+</main>

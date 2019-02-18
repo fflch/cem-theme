@@ -1,0 +1,190 @@
+
+{% set language = language.getId() %}
+<div class="layout-container">
+
+  <main role="main">
+    <section class="container-fluid home-slider">
+      <div class="row">
+        <div class="col-lg-12 wrapper">
+          {{ drupal_view('slidershow', 'slidershow_bloco_home', language) }}
+        </div>
+      </div>
+    </section>
+    <section class="home-call-boxes">
+      <span class="detail-left"></span>
+      <span class="detail-right"></span>
+            {{ drupal_entity('block', 'indicatorblock') }}
+            {# drupal_entity('block', 'sidebar_left') #}
+            {# drupal_entity('block', 'sidebar_right') #}
+    </section>
+    <!-- home call boxes end -->
+    <!-- home news and agenda init -->
+    <div class="container-fluid home-news-and-agenda">
+      <div class="row">
+        <div class="col-xs-12 wrapper">
+          <div class="row">
+            <!-- home news init -->
+            <div class="col-md-9">
+              <section class="home-news">
+                <div class="home-news-header">
+                    {% trans %}
+                      <h2>Notícias em destaque</h2>
+                       <a href="/noticias" class="link-more">mais notícias</a>
+                    {% endtrans %}
+                </div>
+                <div class="row">
+                  <!-- home news item init -->
+                  {{ drupal_view('noticia','bloco_noticia_home',language) }}
+                  <!-- home news item end -->
+                </div>
+              </section>
+            </div>
+            <!-- home news end -->
+            <!-- home agenda init -->
+            <div class="col-md-3">
+              <section class="home-agenda">
+                <div class="home-agenda-header">
+                    {% trans %}
+                      <h2>Eventos/Agenda</h2>
+                    {% endtrans %}
+                </div>
+                <div class="home-agenda-box">
+                  <!-- home agenda item init -->
+                  {{ drupal_view('evento','bloco_evento_home',language) }}
+                  <!-- home agenda item end -->
+                    {% trans %}
+                     <!-- <a href="/difusao-cientifica" class="link-more">mais eventos</a>-->
+                    {% endtrans %}
+                </div>
+              </section>
+            </div>
+            <!-- home agenda end -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- home news and agenda end -->
+    <!-- home video and publications init -->
+    <div class="container-fluid home-videos-and-publications">
+      <div class="row">
+        <div class="col-xs-12 wrapper">
+          <div class="row">
+            <div class="col-md-4">
+              <!-- home video init -->
+              <section class="home-video">
+                <div class="home-video-header">
+                    {% trans %}
+                      <h2>Vídeos</h2>
+                      <a href="https://www.youtube.com/channel/UCCnuV0PnB17TBxHHoOvWMRQ" class="link-more">mais vídeos</a>
+                    {% endtrans %}
+                </div>
+                <div class="home-video-box">
+                  <div class="inner">
+                    <!-- home video item init -->
+                    {{ drupal_view('video', 'bloco_video_home',language) }}
+                    <!-- home video item end -->
+                  </div>
+                </div>
+              </section>
+              <!-- home video end -->
+            </div>
+            <div class="col-md-8">
+              <!-- home publications init -->
+              <section class="home-publications">
+                <div class="home-publications-header">
+                    {% trans %}
+                      <h2>Publicações</h2>
+                      <a href="/publicacoes" class="link-more">mais publicações</a>
+                    {% endtrans %}
+                </div>
+                <div class="home-publications-box">
+                  <div class="row">
+                    <!-- home publications item init -->
+                    {{ drupal_view('slidershow','slidershow_home_publicacao',language) }}
+                    <!-- home publications item end -->
+                  </div>
+                </div>
+              </section>
+              <!-- home publications end -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- home video and publications end -->
+
+    <!-- home pesquisadores and apoio init -->
+    <div class="container-fluid home-pesquisadores-and-apoio">
+      <div class="row">
+        <div class="col-xs-12 wrapper">
+          <div class="row">
+            <!-- home pesquisadores init -->
+            <div class="col-xs-12">
+              <section class="home-pesquisadores">
+                <div class="home-pesquisadores-header">
+                    {% trans %}
+                      <span class="pre">pesquisadores</span>
+                      <h2>Coordenadores de projetos</h2>
+                    {% endtrans %}
+                </div>
+                <div class="home-pesquisadores-box">
+                  <div class="row">
+                    <!-- home pesquisador item init -->                    
+                      {{ drupal_view('colaborador','bloco_colaborador_home', language) }}
+                  </div>
+                </div>
+              </section>
+            </div>
+            <!-- home pesquisadores init -->
+            <!-- home apoio init -->
+            <div class="col-xs-12">
+              <section class="home-apoio">
+                    <div class="title">{% trans %}Apoio{% endtrans %}</div>
+                <div class="logos">
+                  {{ drupal_entity('block','apoio') }}
+				</div>
+              </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- home pesquisadores and apoio end -->
+  </main>
+<footer>
+  <!-- footer newsletter init -->
+  <section class="footer-newsletter">
+    <div class="inner wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="footer-newsletter-form">
+
+                <div>
+                  {{ drupal_entity('block','webform') }}
+                </div>
+
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="footer-newsletter-text">
+                {% trans %}
+                  <span>RECEBA NOSSOS INFORMATIVOS</span><br> Não se preocupe, também não gostamos de SPAM.
+                {% endtrans %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+
+  {% if page.footer %}
+    <footer role="contentinfo">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+
+</div>{# /.layout-container #}
+
+

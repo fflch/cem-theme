@@ -1,0 +1,35 @@
+<main class="main">
+    <!-- internas top header init -->
+
+    <section class="internas-top-header">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="title-page icon icon-search">busca avançada</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="internas-container">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row quem-somos-content">
+                    <!-- quem somos main content init -->
+                    <div class="col-md-4 col-xs-12 que-somos-menu-col">
+                        {{ drupal_entity('block','busca_geral') }}
+                    </div>
+
+                    <div class="col-md-8 col-xs-12 quem-somos-conteudo-col">
+                        <div class="row quem-somos-perfis-content">
+                            {{ drupal_view('busca','busca_geral') }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
