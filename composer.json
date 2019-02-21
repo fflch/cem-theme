@@ -1,0 +1,11 @@
+{
+    "name": "fflch/cem-theme",
+    "type": "drupal-theme",
+    "authors": [
+        {
+            "name": "DanielMM",
+            "email": "medeiros.danielm@gmail.com"
+        }
+    ],
+    "require": {}
+}
