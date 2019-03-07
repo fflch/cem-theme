@@ -1,0 +1,63 @@
+.header-top-links {
+    &>.inner {
+        @include mqrange(0, 1220px) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    .contact-translate {
+        ul {
+            li {
+                &.header-top-btn-contact {
+                    a {
+                        span {
+                            @include mqrange(0, 470px) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header-top {
+    &>.inner {
+        @include mqrange(0, 1220px) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        @include mqrange(0, 960px) {
+            display: block;
+        }
+    }
+
+    @include mqrange(0, 960px) {
+        .logo {
+            float: none;
+            margin: 0 auto;
+            padding-right: 0;
+            width: 420px;
+        }
+
+        .header-search {
+            max-width: none;
+            margin-top: 30px;
+        }
+    }
+
+    @include mqrange(0, 450px) {
+        .logo {
+            width: 100%;
+        }
+    }
+}
+
+.header-menu{
+    @include mqrange(0, 980px){
+        display: none;
+    }
+}
