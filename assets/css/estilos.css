@@ -7657,6 +7657,7 @@ header.header {
   display: none;
   width: 100%;
   background-color: #086AAB;
+  background-color: #075b93;
   position: absolute;
   top: 50%;
   margin-top: -45px;
@@ -7665,7 +7666,7 @@ header.header {
   height: 50px;
 }
 
-/* line 21, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 22, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger {
   position: relative;
   position: absolute;
@@ -7681,17 +7682,18 @@ header.header {
   left: -25px;
 }
 
-/* line 34, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 35, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger > span {
   position: relative;
   display: block;
   width: 30px;
+  width: 17px;
   height: 3px;
   background-color: #fff;
-  margin: 24px auto 0;
+  margin: 24px 0 0 12px;
 }
 
-/* line 41, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 43, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger > span:before, .header-menu-mobile .header-menu-mobile-trigger > span:after {
   position: absolute;
   content: '';
@@ -7703,13 +7705,15 @@ header.header {
   background: inherit;
 }
 
-/* line 52, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 54, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger > span:before {
+  width: 25px;
   margin-top: -8px;
 }
 
-/* line 55, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 58, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger > span:after {
+  width: 10px;
   margin-top: 8px;
 }
 
