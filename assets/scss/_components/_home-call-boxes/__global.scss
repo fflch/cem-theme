@@ -27,6 +27,12 @@
                 font-size: 45px;
             }
         }
+        @include mqrange(0, 590px){
+            flex-wrap: wrap;
+            .home-info-item{
+                padding: 20px 10px;
+            }
+        }
     }
 }
 // .home-call-boxes {
