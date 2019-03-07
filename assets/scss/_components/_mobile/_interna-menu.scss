@@ -2,14 +2,9 @@
     display: none;
 }
 
-.que-somos-menu-col {
+.quem-somos-content {
+
     @include mqrange(0, 768px) {
-
-        // height: 70px;
-        .quem-somos-menu {
-            display: none;
-        }
-
         .menu-side-bar-mobile {
             display: block;
             padding: 0 0 25px;
@@ -28,6 +23,7 @@
             text-align: center;
             padding: 10px 15px;
             cursor: pointer;
+            margin-left: 15px;
 
             &>span {
                 position: relative;
@@ -73,12 +69,27 @@
     }
 }
 
+.que-somos-menu-col {
+    @include mqrange(0, 768px) {
+
+        display: none;
+        // height: 70px;
+        // .quem-somos-menu {
+        //     display: none;
+        // }
+
+
+    }
+}
+
 .show-mobile-menu-side-bar {
     overflow: hidden;
 }
 
 .show-mobile-menu-side-bar {
-    .quem-somos-menu {
+
+    // .quem-somos-menu {
+    .que-somos-menu-col {
         display: block;
         position: fixed;
         top: 0;
@@ -87,24 +98,38 @@
         z-index: 10;
         background-color: #fff;
         padding-top: 60px;
+        padding-left: 0;
+        padding-right: 0;
+        
+    overflow-x: auto;
+    overflow-y: auto;
 
-        &>ul {
-            height: 100%;
-            overflow-y: auto;
-            overflow-x: auto;
+        .quem-somos-menu {
+            // height: 100%;
+            // overflow-y: auto;
+            // overflow-x: auto;
+            // &>ul {
+            //     height: 100%;
+            //     overflow-y: auto;
+            //     overflow-x: auto;
+            // }
         }
     }
-    .menu-side-bar-mobile{
+
+    .menu-side-bar-mobile {
         position: fixed;
         top: 0;
         left: 0;
         z-index: 9999;
         padding: 0;
-        .menu-side-bar-mobile-trigger{
+
+        .menu-side-bar-mobile-trigger {
             margin: 15px;
-            &>span{
-                .icon{
+
+            &>span {
+                .icon {
                     background: transparent;
+
                     &:before,
                     &:after {
                         position: absolute;
@@ -120,10 +145,12 @@
                         top: 0;
                         left: 0;
                     }
-                    &:before{
+
+                    &:before {
                         transform: rotate(45deg);
                     }
-                    &:after{
+
+                    &:after {
                         transform: rotate(-45deg);
                     }
                 }

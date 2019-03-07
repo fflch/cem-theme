@@ -1,6 +1,7 @@
 (function (window, document, $) {
     'use strict';
-    if ($('.que-somos-menu-col').length) {
+    // if ($('.que-somos-menu-col').length) {
+    if ($('.quem-somos-content').length) {
         
 
         var $body = $('body');
@@ -17,12 +18,16 @@
         $($menuMobileSideBarTriggerInner).append($menuMobileSideBarTriggerIcon);
         $($menuMobileSideBarTrigger).append($menuMobileSideBarTriggerInner);
         $($menuMobileSideBarContainer).append($menuMobileSideBarTrigger);
-        $('.que-somos-menu-col').append($menuMobileSideBarContainer);
+        // $('.que-somos-menu-col').append($menuMobileSideBarContainer);
+        $('.quem-somos-content').first().prepend($menuMobileSideBarContainer);
 
         $($menuMobileSideBarTrigger).on('click',function(){
+            // alert('test');
             $($body).toggleClass('show-mobile-menu-side-bar');
-            $('.quem-somos-menu').removeClass('fade-out');
-            $('.quem-somos-menu').addClass('fade-in');
+            // $('.quem-somos-menu').removeClass('fade-out');
+            // $('.quem-somos-menu').addClass('fade-in');
+            $('.que-somos-menu-col').removeClass('fade-out');
+            $('.que-somos-menu-col').addClass('fade-in');
         });
         
 

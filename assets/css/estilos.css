@@ -7953,30 +7953,26 @@ header.header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 768px) {
-  /* line 9, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-  .que-somos-menu-col .quem-somos-menu {
-    display: none;
-  }
-  /* line 13, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-  .que-somos-menu-col .menu-side-bar-mobile {
+  /* line 8, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .quem-somos-content .menu-side-bar-mobile {
     display: block;
     padding: 0 0 25px;
   }
   /* line 18, cem/assets/scss/_helpers/_mixin.scss */
-  .que-somos-menu-col .menu-side-bar-mobile:before, .que-somos-menu-col .menu-side-bar-mobile:after {
+  .quem-somos-content .menu-side-bar-mobile:before, .quem-somos-content .menu-side-bar-mobile:after {
     content: " ";
     display: table;
   }
   /* line 23, cem/assets/scss/_helpers/_mixin.scss */
-  .que-somos-menu-col .menu-side-bar-mobile:after {
+  .quem-somos-content .menu-side-bar-mobile:after {
     clear: both;
   }
   /* line 26, cem/assets/scss/_helpers/_mixin.scss */
-  .que-somos-menu-col .menu-side-bar-mobile {
+  .quem-somos-content .menu-side-bar-mobile {
     *zoom: 1;
   }
-  /* line 19, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-  .que-somos-menu-col .menu-side-bar-mobile-trigger {
+  /* line 14, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .quem-somos-content .menu-side-bar-mobile-trigger {
     float: left;
     font-weight: 700;
     text-transform: uppercase;
@@ -7987,16 +7983,17 @@ header.header {
     text-align: center;
     padding: 10px 15px;
     cursor: pointer;
+    margin-left: 15px;
   }
-  /* line 32, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-  .que-somos-menu-col .menu-side-bar-mobile-trigger > span {
+  /* line 28, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .quem-somos-content .menu-side-bar-mobile-trigger > span {
     position: relative;
     display: block;
     text-align: center;
     padding-left: 25px;
   }
-  /* line 38, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-  .que-somos-menu-col .menu-side-bar-mobile-trigger > span .icon {
+  /* line 34, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .quem-somos-content .menu-side-bar-mobile-trigger > span .icon {
     position: absolute;
     display: block;
     width: 30px;
@@ -8007,8 +8004,8 @@ header.header {
     left: 0;
     margin: 8px 0 0 -3px;
   }
-  /* line 49, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-  .que-somos-menu-col .menu-side-bar-mobile-trigger > span .icon:before, .que-somos-menu-col .menu-side-bar-mobile-trigger > span .icon:after {
+  /* line 45, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .quem-somos-content .menu-side-bar-mobile-trigger > span .icon:before, .quem-somos-content .menu-side-bar-mobile-trigger > span .icon:after {
     position: absolute;
     content: '';
     display: block;
@@ -8018,25 +8015,32 @@ header.header {
     height: 3px;
     background: inherit;
   }
-  /* line 61, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-  .que-somos-menu-col .menu-side-bar-mobile-trigger > span .icon:before {
+  /* line 57, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .quem-somos-content .menu-side-bar-mobile-trigger > span .icon:before {
     width: 20px;
     margin-top: -6px;
   }
-  /* line 66, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-  .que-somos-menu-col .menu-side-bar-mobile-trigger > span .icon:after {
+  /* line 62, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .quem-somos-content .menu-side-bar-mobile-trigger > span .icon:after {
     width: 8px;
     margin-top: 6px;
   }
 }
 
-/* line 76, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+@media only screen and (min-width: 0) and (max-width: 768px) {
+  /* line 72, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .que-somos-menu-col {
+    display: none;
+  }
+}
+
+/* line 85, cem/assets/scss/_components/_mobile/_interna-menu.scss */
 .show-mobile-menu-side-bar {
   overflow: hidden;
 }
 
-/* line 81, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-.show-mobile-menu-side-bar .quem-somos-menu {
+/* line 92, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.show-mobile-menu-side-bar .que-somos-menu-col {
   display: block;
   position: fixed;
   top: 0;
@@ -8045,16 +8049,13 @@ header.header {
   z-index: 10;
   background-color: #fff;
   padding-top: 60px;
-}
-
-/* line 91, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-.show-mobile-menu-side-bar .quem-somos-menu > ul {
-  height: 100%;
-  overflow-y: auto;
+  padding-left: 0;
+  padding-right: 0;
   overflow-x: auto;
+  overflow-y: auto;
 }
 
-/* line 97, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+/* line 119, cem/assets/scss/_components/_mobile/_interna-menu.scss */
 .show-mobile-menu-side-bar .menu-side-bar-mobile {
   position: fixed;
   top: 0;
@@ -8063,17 +8064,17 @@ header.header {
   padding: 0;
 }
 
-/* line 103, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+/* line 126, cem/assets/scss/_components/_mobile/_interna-menu.scss */
 .show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger {
   margin: 15px;
 }
 
-/* line 106, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+/* line 130, cem/assets/scss/_components/_mobile/_interna-menu.scss */
 .show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon {
   background: transparent;
 }
 
-/* line 108, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+/* line 133, cem/assets/scss/_components/_mobile/_interna-menu.scss */
 .show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon:before, .show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon:after {
   position: absolute;
   content: '';
@@ -8089,12 +8090,12 @@ header.header {
   left: 0;
 }
 
-/* line 123, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+/* line 149, cem/assets/scss/_components/_mobile/_interna-menu.scss */
 .show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon:before {
   transform: rotate(45deg);
 }
 
-/* line 126, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+/* line 153, cem/assets/scss/_components/_mobile/_interna-menu.scss */
 .show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon:after {
   transform: rotate(-45deg);
 }
