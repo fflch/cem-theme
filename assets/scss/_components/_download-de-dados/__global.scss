@@ -15,7 +15,7 @@
     float: left;
     width: 100%;
     padding: 40px 0;
-    border-bottom: dashed 1px #D1D1D1;
+    border-bottom: dashed 1px #d1d1d1;
 
     &:last-child {
         border: 0;
@@ -35,7 +35,7 @@
     .textoHide,
     .textoHide * {
         font-size: 15px;
-        color: #7F7F7F;
+        color: #7f7f7f;
         line-height: 1.5;
         margin: 0;
         padding: 0;
@@ -135,12 +135,12 @@
             width: 100%;
             margin-bottom: 10px;
             font-size: 13px;
-            color: #7F7F7F;
+            color: #7f7f7f;
             display: flex;
             align-items: center;
 
             span.extension {
-                content: '';
+                content: "";
                 float: left;
                 width: 40px;
                 height: 20px;
@@ -160,23 +160,23 @@
                     background-color: #666666;
 
                     &:before {
-                        content: 'ZIP';
+                        content: "ZIP";
                     }
                 }
 
                 &.pdf {
-                    background-color: #E74C3C;
+                    background-color: #e74c3c;
 
                     &:before {
-                        content: 'PDF';
+                        content: "PDF";
                     }
                 }
 
                 &.shp {
-                    background-color: #5BB264;
+                    background-color: #5bb264;
 
                     &:before {
-                        content: 'SHP';
+                        content: "SHP";
                     }
                 }
             }
@@ -188,6 +188,14 @@
         padding-left: 30%;
         padding-top: 0;
         margin-bottom: 40px;
+        padding-bottom: 60px;
+        min-height: 180px;
+        &._full{
+          padding-left: 0;
+          .files{
+            padding: 20px 0;
+          }
+        }
 
         .map-box {
             position: absolute;
@@ -198,14 +206,14 @@
             ._inner {
                 @extend %container;
                 max-width: 100%;
-                border: solid 1px #EAEAEA;
+                border: solid 1px #eaeaea;
                 padding: 20px;
             }
 
             img {
                 max-width: 100%;
                 height: auto;
-                border: solid 1px #73716E;
+                border: solid 1px #73716e;
             }
         }
 
@@ -225,23 +233,24 @@
         //     display: none;
         // }
 
-
-
         .files {
             padding: 0;
 
             .file-item {
                 position: relative;
-                float: left;
-                padding: 0 10px 35px;
+                // float: left;
+                // padding: 0 10px 35px;
+
                 .file {
-                    width: 40px;
-                    padding: 0;
-                    a{
-                        display: block;
-                        width: 40px;
-                        height: 24px;
-                        font-size: 0;
+                    // width: 40px;
+                    // padding: 0;
+
+                    a {
+                        // display: block;
+                        // width: 40px;
+                        // height: 24px;
+                        // font-size: 0;
+                        border: 0;
                     }
                 }
 
@@ -252,44 +261,52 @@
                 &+.file-item {
                     padding-top: 0;
                 }
-                .alert-blue{
-                    position: absolute;
-                    margin-top: 10px;
-                    left: 50%;
-                    margin-left: -10px;
-                    &:hover > span{
+
+                .alert-blue {
+                    // position: absolute;
+                    // margin-top: 10px;
+                    // left: 50%;
+                    // margin-left: -10px;
+
+                    &:hover>span {
                         z-index: 9999;
                     }
                 }
             }
         }
 
-        .infos{
+        .infos {
             @extend %container;
             padding: 20px 0 0;
-            .info-line{
+
+            .info-line {
                 @extend %container;
                 padding-bottom: 10px;
                 font-size: 13px;
                 color: #525252;
-                b{
+
+                b {
                     text-transform: uppercase;
                     font-size: 11px;
                 }
             }
         }
+
         .btn-show-more {
             float: left;
-            width: 100%;
+            // width: 100%;
             padding: 15px 0;
+            padding: 0;
             @include cf();
+            position: absolute;
+            bottom: 0;
 
             &>span {
                 display: block;
                 padding: 20px 0;
                 padding-left: 50px;
                 font-size: 13px;
-                color: #7F7F7F;
+                color: #7f7f7f;
                 cursor: pointer;
 
                 &.more {
@@ -311,6 +328,25 @@
                     display: block;
                 }
             }
+
+            &+h2 {
+                padding: 15px 0 0;
+            }
+        }
+
+        .files,
+        .infos,
+        .btn-show-more+h2 {
+            display: none;
+        }
+
+        &.show-content {
+
+            .files,
+            .infos ,
+            .btn-show-more+h2 {
+                display: block;
+            }
         }
     }
 }
@@ -321,14 +357,13 @@
     .views-field-title {
         float: left;
         width: 100%;
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         font-weight: 400;
         margin-bottom: 30px;
         font-size: 15px;
         line-height: 1.5;
     }
 }
-
 
 .alert-blue {
     position: relative;
@@ -340,11 +375,11 @@
 
     &>span {
         display: none;
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         font-weight: 500;
         position: absolute;
         width: 360px;
-        background-color: #357CBC;
+        background-color: #357cbc;
         border-radius: 5px;
         border: solid 2px #ffffff;
         box-shadow: 0px 0px 17px #000000;
@@ -358,9 +393,9 @@
         margin-left: -180px;
 
         &:after {
-            content: '';
+            content: "";
             display: block;
-            background: #357CBC;
+            background: #357cbc;
             width: 10px;
             height: 10px;
             position: absolute;
