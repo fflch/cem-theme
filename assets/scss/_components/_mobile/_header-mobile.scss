@@ -24,6 +24,14 @@
 }
 
 .header-top {
+    @include mqrange(0, 980px) {
+        border-bottom: solid 15px #086aab;
+        .header-search{
+            width: 100%;
+            max-width: none;
+            margin-top: 30px;
+        }
+    }
     &>.inner {
         @include mqrange(0, 1220px) {
             padding-left: 10px;
@@ -43,12 +51,17 @@
             width: 420px;
         }
 
-        .header-search {
-            max-width: none;
-            margin-top: 30px;
-        }
+        // .header-search {
+        //     max-width: none;
+        //     margin-top: 30px;
+        // }
     }
 
+    @include mqrange(0, 520px) {
+        .logo {
+            padding-right: 50px;
+        }
+    }
     @include mqrange(0, 450px) {
         .logo {
             width: 100%;

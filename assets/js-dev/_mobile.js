@@ -16,7 +16,7 @@
     $($mobileHeaderMenuTrigger).append($mobileHeaderMenuTriggerInnerEl);
     $($mobileHeaderMenuContainer).append($mobileHeaderMenuTrigger);
 
-    $('header.header').append($mobileHeaderMenuContainer);
+    $('header.header .header-top').append($mobileHeaderMenuContainer);
 
     $($mobileHeaderMenuClose).append($mobileHeaderMenuCloseInnerEl);
     $($mobileHeaderMenuClose).addClass('mobile-close')
