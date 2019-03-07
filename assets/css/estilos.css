@@ -7946,4 +7946,156 @@ header.header {
   white-space: normal;
 }
 
+/* line 1, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.menu-side-bar-mobile {
+  display: none;
+}
+
+@media only screen and (min-width: 0) and (max-width: 768px) {
+  /* line 9, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .que-somos-menu-col .quem-somos-menu {
+    display: none;
+  }
+  /* line 13, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .que-somos-menu-col .menu-side-bar-mobile {
+    display: block;
+    padding: 0 0 25px;
+  }
+  /* line 18, cem/assets/scss/_helpers/_mixin.scss */
+  .que-somos-menu-col .menu-side-bar-mobile:before, .que-somos-menu-col .menu-side-bar-mobile:after {
+    content: " ";
+    display: table;
+  }
+  /* line 23, cem/assets/scss/_helpers/_mixin.scss */
+  .que-somos-menu-col .menu-side-bar-mobile:after {
+    clear: both;
+  }
+  /* line 26, cem/assets/scss/_helpers/_mixin.scss */
+  .que-somos-menu-col .menu-side-bar-mobile {
+    *zoom: 1;
+  }
+  /* line 19, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .que-somos-menu-col .menu-side-bar-mobile-trigger {
+    float: left;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #086aab;
+    color: #ffffff;
+    border-radius: 50px;
+    height: 40px;
+    text-align: center;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  /* line 32, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .que-somos-menu-col .menu-side-bar-mobile-trigger > span {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding-left: 25px;
+  }
+  /* line 38, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .que-somos-menu-col .menu-side-bar-mobile-trigger > span .icon {
+    position: absolute;
+    display: block;
+    width: 30px;
+    width: 13px;
+    height: 3px;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    margin: 8px 0 0 -3px;
+  }
+  /* line 49, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .que-somos-menu-col .menu-side-bar-mobile-trigger > span .icon:before, .que-somos-menu-col .menu-side-bar-mobile-trigger > span .icon:after {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    background: inherit;
+  }
+  /* line 61, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .que-somos-menu-col .menu-side-bar-mobile-trigger > span .icon:before {
+    width: 20px;
+    margin-top: -6px;
+  }
+  /* line 66, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .que-somos-menu-col .menu-side-bar-mobile-trigger > span .icon:after {
+    width: 8px;
+    margin-top: 6px;
+  }
+}
+
+/* line 76, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.show-mobile-menu-side-bar {
+  overflow: hidden;
+}
+
+/* line 81, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.show-mobile-menu-side-bar .quem-somos-menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 10;
+  background-color: #fff;
+  padding-top: 60px;
+}
+
+/* line 91, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.show-mobile-menu-side-bar .quem-somos-menu > ul {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+/* line 97, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.show-mobile-menu-side-bar .menu-side-bar-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  padding: 0;
+}
+
+/* line 103, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger {
+  margin: 15px;
+}
+
+/* line 106, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon {
+  background: transparent;
+}
+
+/* line 108, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon:before, .show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon:after {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 3px;
+  background: #ffffff;
+  transform-origin: center;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+/* line 123, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon:before {
+  transform: rotate(45deg);
+}
+
+/* line 126, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon:after {
+  transform: rotate(-45deg);
+}
+
 /*# sourceMappingURL=../../../sass */
