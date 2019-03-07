@@ -112,8 +112,11 @@
     if ($('.home-news-and-agenda').length) {
         // home news
         $('.home-news-and-agenda .home-news').parent('div').addClass('col-sm-8 col-xs-12');
-        $('.home-news-and-agenda .home-news > .row >.col-md-4').each(function(){
-            $(this).addClass('col-sm-4 col-xs-6');
+        // $('.home-news-and-agenda .home-news > .row >.col-md-4').each(function(){
+        //     $(this).addClass('col-sm-4 col-xs-6');
+        // });
+        $('.home-news-and-agenda .home-news .home-news-item').each(function(){
+            $(this).parent('div').addClass('col-sm-4 col-xs-6 home-news-item-box');
         });
         
         // home agenda
