@@ -44,4 +44,7 @@
     &>span{
         text-transform: uppercase;
     }
+    @include mqrange(0, 768px){
+        padding-top: 20px;
+    }
 }
