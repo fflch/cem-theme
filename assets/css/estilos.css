@@ -7588,8 +7588,21 @@ header.header {
   }
 }
 
+@media only screen and (min-width: 0) and (max-width: 980px) {
+  /* line 26, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  .header-top {
+    border-bottom: solid 15px #086aab;
+  }
+  /* line 29, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  .header-top .header-search {
+    width: 100%;
+    max-width: none;
+    margin-top: 30px;
+  }
+}
+
 @media only screen and (min-width: 0) and (max-width: 1220px) {
-  /* line 27, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 35, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top > .inner {
     padding-left: 10px;
     padding-right: 10px;
@@ -7597,56 +7610,66 @@ header.header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 960px) {
-  /* line 27, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 35, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top > .inner {
     display: block;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 960px) {
-  /* line 39, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 47, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .logo {
     float: none;
     margin: 0 auto;
     padding-right: 0;
     width: 420px;
   }
-  /* line 46, cem/assets/scss/_components/_mobile/_header-mobile.scss */
-  .header-top .header-search {
-    max-width: none;
-    margin-top: 30px;
+}
+
+@media only screen and (min-width: 0) and (max-width: 520px) {
+  /* line 61, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  .header-top .logo {
+    padding-right: 50px;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 450px) {
-  /* line 53, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 66, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .logo {
     width: 100%;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 980px) {
-  /* line 59, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 72, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-menu {
     display: none;
   }
 }
 
 /* line 1, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+.header-top {
+  position: relative;
+}
+
+/* line 4, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile {
   display: none;
   width: 100%;
   background-color: #086AAB;
-  border-bottom: solid 5px #CCCCCC;
-  z-index: 7;
-  position: relative;
-  height: 75px;
-  padding: 0 10px;
+  position: absolute;
+  top: 50%;
+  margin-top: -45px;
+  right: 0;
+  width: 35px;
+  height: 50px;
 }
 
-/* line 10, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 21, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger {
   position: relative;
+  position: absolute;
+  right: 10px;
   float: right;
   width: 50px;
   height: 50px;
@@ -7654,9 +7677,11 @@ header.header {
   margin-top: 10px;
   border-radius: 50%;
   cursor: pointer;
+  margin: 0;
+  left: -25px;
 }
 
-/* line 19, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 34, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger > span {
   position: relative;
   display: block;
@@ -7666,7 +7691,7 @@ header.header {
   margin: 24px auto 0;
 }
 
-/* line 26, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 41, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger > span:before, .header-menu-mobile .header-menu-mobile-trigger > span:after {
   position: absolute;
   content: '';
@@ -7678,18 +7703,18 @@ header.header {
   background: inherit;
 }
 
-/* line 37, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 52, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger > span:before {
   margin-top: -8px;
 }
 
-/* line 40, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 55, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger > span:after {
   margin-top: 8px;
 }
 
 @media only screen and (min-width: 0) and (max-width: 980px) {
-  /* line 1, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+  /* line 4, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
   .header-menu-mobile {
     display: block;
   }

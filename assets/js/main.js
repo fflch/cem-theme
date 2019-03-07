@@ -373,6 +373,16 @@
 })(window, document, jQuery);
 (function (window, document, $) {
     'use strict';
+    if ($('.que-somos-menu-col').length) {
+        // home news
+        $('.que-somos-menu-col').addClass('col-sm-4');
+        $('.quem-somos-conteudo-col').addClass('col-sm-8');
+        
+
+    }
+})(window, document, jQuery);
+(function (window, document, $) {
+    'use strict';
 
     if ($('.download-item.with-map').length) {
         var $mapItem = $('.download-item.with-map');
@@ -431,7 +441,7 @@
     $($mobileHeaderMenuTrigger).append($mobileHeaderMenuTriggerInnerEl);
     $($mobileHeaderMenuContainer).append($mobileHeaderMenuTrigger);
 
-    $('header.header').append($mobileHeaderMenuContainer);
+    $('header.header .header-top').append($mobileHeaderMenuContainer);
 
     $($mobileHeaderMenuClose).append($mobileHeaderMenuCloseInnerEl);
     $($mobileHeaderMenuClose).addClass('mobile-close')
