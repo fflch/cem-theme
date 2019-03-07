@@ -4,7 +4,8 @@
     padding-top: 30px;
     padding-bottom: 55px;
     @include cf();
-    .view {
+    .view,
+    .views-element-container {
         position: relative;
         float: left;
         width: 100%;
@@ -142,6 +143,22 @@
                     z-index: 1;
                 }
             }
+        }
+    }
+    @include mqrange(0, 690px){
+        div.title{
+            height: 85px;
+        }
+        div.text{
+            height: 140px;
+        }
+    }
+    @include mqrange(0, 480px){
+        div.title{
+            height: 85px;
+        }
+        div.text{
+            height: 110px;
         }
     }
 }
