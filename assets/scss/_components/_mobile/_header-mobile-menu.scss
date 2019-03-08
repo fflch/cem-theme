@@ -1,0 +1,180 @@
+.mobile-close,
+.menu-mobile-open-drop {
+    display: none;
+}
+
+.show-mobile-menu {
+    overflow: hidden;
+
+    .header-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        height: 100%;
+        z-index: 10;
+        // opacity: 0;
+
+        .mobile-close {
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: darken(#086AAB, 10%);
+            margin-top: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            top: 5px;
+            right: 15px;
+            z-index: 9999;
+
+            &>span {
+                position: relative;
+                width: 30px;
+                height: 3px;
+
+                &:before,
+                &:after {
+                    position: absolute;
+                    content: '';
+                    display: block;
+                    left: 0;
+                    top: 0;
+                    width: 30px;
+                    height: 3px;
+                    margin: 0 auto;
+                    background: #fff;
+                    transform-origin: center;
+                }
+
+                &:before {
+                    transform: rotate(45deg);
+                }
+
+                &:after {
+                    transform: rotate(-45deg);
+                }
+            }
+
+        }
+
+        &>.inner {
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: auto;
+
+            &>ul {
+                padding: 90px 15px 10px;
+                display: block;
+                @for $i from 1 to 8 {
+                    $value: 0.5 + ((1/20) * $i);
+                    &>li:nth-child(#{$i})>a {
+                      animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) #{$value}s both;
+                    }
+                  }
+
+                &>li {
+                    position: relative;
+                    width: 100%;
+                    padding: 0;
+                    margin-bottom: 20px;
+
+                    &:before {
+                        display: none !important;
+                    }
+
+
+
+                    &>a {
+                        text-align: center;
+                        border-radius: 5px;
+                        border: solid 1px #ffffff;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        font-weight: 700;
+
+                        &[data-js="has-submenu"] {
+                            &:after {
+                                display: none;
+                            }
+                        }
+
+                        .menu-mobile-open-drop {
+                            display: block;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            height: 100%;
+                            width: 50px;
+                            position: absolute;
+                            cursor: pointer;
+
+                            &>span {
+                                position: relative;
+                                width: 30px;
+                                height: 2px;
+
+                                &:before,
+                                &:after {
+                                    position: absolute;
+                                    content: '';
+                                    display: block;
+                                    left: 0;
+                                    top: 0;
+                                    width: 30px;
+                                    height: 3px;
+                                    margin: 0 auto;
+                                    background: #fff;
+                                    transform-origin: center;
+                                }
+
+                                &:before {
+                                    transform: rotate(90deg);
+                                }
+
+                                &:after {
+                                    // transform: rotate(-45deg);
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        &>ul {
+                            display: none;
+                        }
+                    }
+
+                    &.show-drop-down-mobile {
+                        &>a{
+                            border-radius: 5px 5px 0 0;
+                        }
+                        &>ul {
+                            border-radius: 0 0 5px 5px;
+                            position: relative !important;
+                            display: block !important;
+                            &>li{
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                                &:hover{
+                                    background-color: #e0e0e0;
+                                }
+                                &>a{
+                                    padding: 20px;
+                                    font-size: 13px;
+                                    word-break: break-all;
+                                    white-space: normal;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

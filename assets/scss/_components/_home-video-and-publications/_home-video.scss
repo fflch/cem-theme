@@ -24,6 +24,9 @@
         a.link-more {
             float: right;
             margin-top: 15px;
+            @include mqrange(0, 1024px){
+                font-size: 0;
+            }
         }
     }
     .home-video-box {
@@ -96,6 +99,7 @@
             img {
                 display: block;
                 max-width: 100%;
+                width: 100%;
                 height: auto;
             }
         }
@@ -103,6 +107,7 @@
             margin: 0;
             padding: 40px 20px 30px;
             border-bottom: dashed 1px #D1D1D1;
+            color: #4E4E4E;
             h3 {
                 padding: 0;
                 margin: 0;
@@ -110,6 +115,9 @@
                 font-weight: 500;
                 color: #4E4E4E;
                 line-height: 2.5;
+            }
+            a{
+                color: inherit;
             }
         }
         div.text {
@@ -124,5 +132,11 @@
                 line-height: 2.5;
             }
         }
+    }
+}
+
+.home-video-wrapper{
+    @include mqrange(0, 600px){
+        width: 100% !important;
     }
 }

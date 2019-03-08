@@ -23,8 +23,12 @@
   "_components/_agenda/__global.scss",
   "_components/_sistemas-interativos/__global.scss",
   "_components/_download-de-dados/__global.scss",
-  "_components/_busca/__global.scss", "_components/_ui-elements/__global.scss";
+  "_components/_busca/__global.scss", 
+  "_components/_ui-elements/__global.scss";
 
 // ### Layout
 @import "_layout/_header/__global.scss", "_layout/_footer/__global.scss",
   "_layout/_internas/__global.scss";
+
+  // ### Mobile
+  @import "_components/_mobile/__global.scss"

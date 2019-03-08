@@ -20,6 +20,7 @@ nav.pager ul.pager__items {
     justify-content: center;
     align-items: center;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .item-list .pager li,
