@@ -67,5 +67,9 @@
                 }
             }
         }
+        @include mqrange(0, 768px){
+            height: auto;
+            padding-bottom: 30px;
+        }
     }
 }

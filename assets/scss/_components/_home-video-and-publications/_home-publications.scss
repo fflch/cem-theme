@@ -24,6 +24,9 @@
             float: right;
             margin-top: 15px;
             color: #ffffff;
+            @include mqrange(0,768px){
+                font-size: 0;
+            }
         }
     }
     .home-publications-box {
@@ -102,6 +105,7 @@
                 img {
                     display: block;
                     max-width: 100%;
+                    width: 100%;
                     height: auto;
                 }
             }
@@ -109,6 +113,7 @@
                 margin: 0;
                 padding: 15px 20px;
                 border-bottom: dashed 1px #D1D1D1;
+                color: #4E4E4E;
                 h3 {
                     padding: 0;
                     margin: 0;
@@ -116,6 +121,9 @@
                     font-weight: 500;
                     color: #4E4E4E;
                     line-height: 2;
+                }
+                a{
+                    color: inherit;
                 }
             }
             div.text {
@@ -131,5 +139,11 @@
                 }
             }
         }
+    }
+}
+
+.home-publications-wrapper{
+    @include mqrange(0, 600px){
+        width: 100% !important;
     }
 }
