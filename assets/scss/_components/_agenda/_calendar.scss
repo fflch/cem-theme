@@ -376,6 +376,8 @@
       flex-direction: column;
       justify-content: center;
       border-radius: 50%;
+      flex-shrink: 0;
+      flex-grow: 0;
       span {
         display: block;
         text-align: center;

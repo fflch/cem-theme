@@ -2339,10 +2339,9 @@ nav.pager ul.pager__items {
   justify-content: center;
   align-items: center;
   position: relative;
-  flex-wrap: wrap;
 }
 
-/* line 26, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 25, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list .pager li,
 nav.pager ul.pager__items li {
   background-image: none;
@@ -2351,21 +2350,21 @@ nav.pager ul.pager__items li {
   padding: 0.5em;
 }
 
-/* line 32, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 31, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list .pager li a,
 nav.pager ul.pager__items li a {
   background-color: transparent !important;
   border: 0 !important;
 }
 
-/* line 35, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 34, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list .pager li a:focus,
 nav.pager ul.pager__items li a:focus {
   background-color: transparent !important;
   border: 0 !important;
 }
 
-/* line 42, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 41, cem/assets/scss/_components/_paginacao/__global.scss */
 nav.pager ul.pager__items li .visually-hidden {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
@@ -2375,7 +2374,7 @@ nav.pager ul.pager__items li .visually-hidden {
   word-wrap: normal;
 }
 
-/* line 51, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 50, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li,
 nav.pager ul.pager__items li {
   display: flex;
@@ -2395,7 +2394,7 @@ nav.pager ul.pager__items li {
   transition: all 0.2s linear;
 }
 
-/* line 70, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 69, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li.pager-first.first,
 .item-list ul.pager li.pager-last.last,
 nav.pager ul.pager__items li.pager__item--ellipsis,
@@ -2404,12 +2403,12 @@ nav.pager ul.pager__items li.pager__item--last {
   display: none !important;
 }
 
-/* line 78, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 77, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li.pager-ellipsis {
   display: none !important;
 }
 
-/* line 82, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 81, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li.pager-previous,
 .item-list ul.pager li.pager-next,
 nav.pager ul.pager__items li.pager__item--previous,
@@ -2419,7 +2418,7 @@ nav.pager ul.pager__items li.pager__item--next {
   width: auto;
 }
 
-/* line 101, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 100, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li.pager-previous:hover,
 .item-list ul.pager li.pager-next:hover,
 nav.pager ul.pager__items li.pager__item--previous:hover,
@@ -2429,7 +2428,7 @@ nav.pager ul.pager__items li.pager__item--next:hover {
   color: #6A6A6A;
 }
 
-/* line 118, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 117, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li:hover,
 nav.pager ul.pager__items li:hover,
 nav.pager ul.pager__items li.is-active {
@@ -7589,21 +7588,8 @@ header.header {
   }
 }
 
-@media only screen and (min-width: 0) and (max-width: 980px) {
-  /* line 26, cem/assets/scss/_components/_mobile/_header-mobile.scss */
-  .header-top {
-    border-bottom: solid 15px #086aab;
-  }
-  /* line 29, cem/assets/scss/_components/_mobile/_header-mobile.scss */
-  .header-top .header-search {
-    width: 100%;
-    max-width: none;
-    margin-top: 30px;
-  }
-}
-
 @media only screen and (min-width: 0) and (max-width: 1220px) {
-  /* line 35, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 27, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top > .inner {
     padding-left: 10px;
     padding-right: 10px;
@@ -7611,67 +7597,56 @@ header.header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 960px) {
-  /* line 35, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 27, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top > .inner {
     display: block;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 960px) {
-  /* line 47, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 39, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .logo {
     float: none;
     margin: 0 auto;
     padding-right: 0;
     width: 420px;
   }
-}
-
-@media only screen and (min-width: 0) and (max-width: 520px) {
-  /* line 61, cem/assets/scss/_components/_mobile/_header-mobile.scss */
-  .header-top .logo {
-    padding-right: 50px;
+  /* line 46, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  .header-top .header-search {
+    max-width: none;
+    margin-top: 30px;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 450px) {
-  /* line 66, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 53, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .logo {
     width: 100%;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 980px) {
-  /* line 72, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 59, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-menu {
     display: none;
   }
 }
 
 /* line 1, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
-.header-top {
-  position: relative;
-}
-
-/* line 4, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile {
   display: none;
   width: 100%;
   background-color: #086AAB;
-  background-color: #075b93;
-  position: absolute;
-  top: 50%;
-  margin-top: -45px;
-  right: 0;
-  width: 35px;
-  height: 50px;
+  border-bottom: solid 5px #CCCCCC;
+  z-index: 7;
+  position: relative;
+  height: 75px;
+  padding: 0 10px;
 }
 
-/* line 22, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 10, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger {
   position: relative;
-  position: absolute;
-  right: 10px;
   float: right;
   width: 50px;
   height: 50px;
@@ -7679,22 +7654,19 @@ header.header {
   margin-top: 10px;
   border-radius: 50%;
   cursor: pointer;
-  margin: 0;
-  left: -25px;
 }
 
-/* line 35, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 19, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger > span {
   position: relative;
   display: block;
   width: 30px;
-  width: 17px;
   height: 3px;
   background-color: #fff;
-  margin: 24px 0 0 12px;
+  margin: 24px auto 0;
 }
 
-/* line 43, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 26, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger > span:before, .header-menu-mobile .header-menu-mobile-trigger > span:after {
   position: absolute;
   content: '';
@@ -7706,20 +7678,18 @@ header.header {
   background: inherit;
 }
 
-/* line 54, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 37, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger > span:before {
-  width: 25px;
   margin-top: -8px;
 }
 
-/* line 58, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 40, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger > span:after {
-  width: 10px;
   margin-top: 8px;
 }
 
 @media only screen and (min-width: 0) and (max-width: 980px) {
-  /* line 4, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+  /* line 1, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
   .header-menu-mobile {
     display: block;
   }
@@ -7945,159 +7915,6 @@ header.header {
   font-size: 13px;
   word-break: break-all;
   white-space: normal;
-}
-
-/* line 1, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-.menu-side-bar-mobile {
-  display: none;
-}
-
-@media only screen and (min-width: 0) and (max-width: 768px) {
-  /* line 8, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-  .quem-somos-content .menu-side-bar-mobile {
-    display: block;
-    padding: 0 0 25px;
-  }
-  /* line 18, cem/assets/scss/_helpers/_mixin.scss */
-  .quem-somos-content .menu-side-bar-mobile:before, .quem-somos-content .menu-side-bar-mobile:after {
-    content: " ";
-    display: table;
-  }
-  /* line 23, cem/assets/scss/_helpers/_mixin.scss */
-  .quem-somos-content .menu-side-bar-mobile:after {
-    clear: both;
-  }
-  /* line 26, cem/assets/scss/_helpers/_mixin.scss */
-  .quem-somos-content .menu-side-bar-mobile {
-    *zoom: 1;
-  }
-  /* line 14, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-  .quem-somos-content .menu-side-bar-mobile-trigger {
-    float: left;
-    font-weight: 700;
-    text-transform: uppercase;
-    background-color: #086aab;
-    color: #ffffff;
-    border-radius: 50px;
-    height: 40px;
-    text-align: center;
-    padding: 10px 15px;
-    cursor: pointer;
-    margin-left: 15px;
-  }
-  /* line 28, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-  .quem-somos-content .menu-side-bar-mobile-trigger > span {
-    position: relative;
-    display: block;
-    text-align: center;
-    padding-left: 25px;
-  }
-  /* line 34, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-  .quem-somos-content .menu-side-bar-mobile-trigger > span .icon {
-    position: absolute;
-    display: block;
-    width: 30px;
-    width: 13px;
-    height: 3px;
-    background-color: #fff;
-    top: 0;
-    left: 0;
-    margin: 8px 0 0 -3px;
-  }
-  /* line 45, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-  .quem-somos-content .menu-side-bar-mobile-trigger > span .icon:before, .quem-somos-content .menu-side-bar-mobile-trigger > span .icon:after {
-    position: absolute;
-    content: '';
-    display: block;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 3px;
-    background: inherit;
-  }
-  /* line 57, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-  .quem-somos-content .menu-side-bar-mobile-trigger > span .icon:before {
-    width: 20px;
-    margin-top: -6px;
-  }
-  /* line 62, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-  .quem-somos-content .menu-side-bar-mobile-trigger > span .icon:after {
-    width: 8px;
-    margin-top: 6px;
-  }
-}
-
-@media only screen and (min-width: 0) and (max-width: 768px) {
-  /* line 72, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-  .que-somos-menu-col {
-    display: none;
-  }
-}
-
-/* line 85, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-.show-mobile-menu-side-bar {
-  overflow: hidden;
-}
-
-/* line 92, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-.show-mobile-menu-side-bar .que-somos-menu-col {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  z-index: 10;
-  background-color: #fff;
-  padding-top: 60px;
-  padding-left: 0;
-  padding-right: 0;
-  overflow-x: auto;
-  overflow-y: auto;
-}
-
-/* line 119, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-.show-mobile-menu-side-bar .menu-side-bar-mobile {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  padding: 0;
-}
-
-/* line 126, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-.show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger {
-  margin: 15px;
-}
-
-/* line 130, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-.show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon {
-  background: transparent;
-}
-
-/* line 133, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-.show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon:before, .show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon:after {
-  position: absolute;
-  content: '';
-  display: block;
-  left: 0;
-  top: 0;
-  width: 20px;
-  height: 3px;
-  background: #ffffff;
-  transform-origin: center;
-  margin: 0;
-  top: 0;
-  left: 0;
-}
-
-/* line 149, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-.show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon:before {
-  transform: rotate(45deg);
-}
-
-/* line 153, cem/assets/scss/_components/_mobile/_interna-menu.scss */
-.show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon:after {
-  transform: rotate(-45deg);
 }
 
 /*# sourceMappingURL=../../../sass */
