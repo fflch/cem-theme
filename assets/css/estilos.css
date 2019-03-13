@@ -2339,9 +2339,10 @@ nav.pager ul.pager__items {
   justify-content: center;
   align-items: center;
   position: relative;
+  flex-wrap: wrap;
 }
 
-/* line 25, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 26, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list .pager li,
 nav.pager ul.pager__items li {
   background-image: none;
@@ -2350,21 +2351,21 @@ nav.pager ul.pager__items li {
   padding: 0.5em;
 }
 
-/* line 31, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 32, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list .pager li a,
 nav.pager ul.pager__items li a {
   background-color: transparent !important;
   border: 0 !important;
 }
 
-/* line 34, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 35, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list .pager li a:focus,
 nav.pager ul.pager__items li a:focus {
   background-color: transparent !important;
   border: 0 !important;
 }
 
-/* line 41, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 42, cem/assets/scss/_components/_paginacao/__global.scss */
 nav.pager ul.pager__items li .visually-hidden {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
@@ -2374,7 +2375,7 @@ nav.pager ul.pager__items li .visually-hidden {
   word-wrap: normal;
 }
 
-/* line 50, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 51, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li,
 nav.pager ul.pager__items li {
   display: flex;
@@ -2394,7 +2395,7 @@ nav.pager ul.pager__items li {
   transition: all 0.2s linear;
 }
 
-/* line 69, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 70, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li.pager-first.first,
 .item-list ul.pager li.pager-last.last,
 nav.pager ul.pager__items li.pager__item--ellipsis,
@@ -2403,12 +2404,12 @@ nav.pager ul.pager__items li.pager__item--last {
   display: none !important;
 }
 
-/* line 77, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 78, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li.pager-ellipsis {
   display: none !important;
 }
 
-/* line 81, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 82, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li.pager-previous,
 .item-list ul.pager li.pager-next,
 nav.pager ul.pager__items li.pager__item--previous,
@@ -2418,7 +2419,7 @@ nav.pager ul.pager__items li.pager__item--next {
   width: auto;
 }
 
-/* line 100, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 101, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li.pager-previous:hover,
 .item-list ul.pager li.pager-next:hover,
 nav.pager ul.pager__items li.pager__item--previous:hover,
@@ -2428,7 +2429,7 @@ nav.pager ul.pager__items li.pager__item--next:hover {
   color: #6A6A6A;
 }
 
-/* line 117, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 118, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li:hover,
 nav.pager ul.pager__items li:hover,
 nav.pager ul.pager__items li.is-active {
@@ -5569,9 +5570,11 @@ nav.pager ul.pager__items li.is-active {
   flex-direction: column;
   justify-content: center;
   border-radius: 50%;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
-/* line 379, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 381, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos.new-box > .date-circle span {
   display: block;
   text-align: center;
@@ -5580,14 +5583,14 @@ nav.pager ul.pager__items li.is-active {
   color: #ffffff;
 }
 
-/* line 384, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 386, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos.new-box > .date-circle span.day {
   font-weight: 700;
   font-size: 18px;
   padding-bottom: 0px;
 }
 
-/* line 389, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 391, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos.new-box > .date-circle span.month {
   font-size: 11px;
   text-transform: capitalize;
@@ -5595,42 +5598,50 @@ nav.pager ul.pager__items li.is-active {
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* line 395, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 397, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos.new-box > .date-circle span.year {
   padding-bottom: 6px;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* line 402, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 404, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos.new-box > .evento-infos {
   padding-left: 20px;
   flex-grow: 2;
   justify-content: flex-start;
 }
 
-/* line 406, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 408, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos.new-box > .evento-infos span {
   display: block;
   padding-bottom: 10px;
 }
 
-/* line 409, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 411, cem/assets/scss/_components/_agenda/_calendar.scss */
+.listagem-resultados .box-eventos.new-box > .evento-infos span.category {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/* line 416, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos.new-box > .evento-infos span.title {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 20px;
   color: #086aab;
   border: 0;
+  padding-bottom: 20px;
 }
 
-/* line 414, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 422, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos.new-box > .evento-infos span.title a {
   border: 0;
   text-decoration: none;
+  color: #333;
 }
 
-/* line 419, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 428, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos.new-box > .evento-infos span.data-completa {
   font-size: 12px;
   color: #666666;
@@ -5639,7 +5650,7 @@ nav.pager ul.pager__items li.is-active {
   padding-left: 18px;
 }
 
-/* line 426, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 435, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos.new-box > .evento-infos span.local {
   font-size: 13px;
   color: #666666;
@@ -5650,17 +5661,17 @@ nav.pager ul.pager__items li.is-active {
   color: #086aab;
 }
 
-/* line 434, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 443, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos.new-box > .evento-infos span.local p {
   margin: 0;
 }
 
-/* line 443, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 452, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos:last-child {
   border-bottom: none;
 }
 
-/* line 447, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 456, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo {
   font-size: 11px;
   color: #727272;
@@ -5670,7 +5681,7 @@ nav.pager ul.pager__items li.is-active {
   z-index: 2;
 }
 
-/* line 455, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 464, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo:before {
   position: absolute;
   content: "";
@@ -5684,24 +5695,24 @@ nav.pager ul.pager__items li.is-active {
   top: -9px;
 }
 
-/* line 469, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 478, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo.no-sphere:before {
   display: none;
 }
 
-/* line 475, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 484, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo .ev-date-box {
   position: relative;
   z-index: 2;
 }
 
-/* line 480, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 489, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo .ev-dia {
   color: #ffffff;
   display: inline-block;
 }
 
-/* line 489, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 498, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul li {
   display: inline-block;
   text-align: center;
@@ -5714,12 +5725,12 @@ nav.pager ul.pager__items li.is-active {
   margin: 0 2px;
 }
 
-/* line 499, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 508, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul li:first-child {
   margin-left: 0;
 }
 
-/* line 503, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 512, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul li:before {
   position: absolute;
   content: "";
@@ -5733,12 +5744,12 @@ nav.pager ul.pager__items li.is-active {
   top: -9px;
 }
 
-/* line 520, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 529, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo .ev-mes {
   display: none;
 }
 
-/* line 524, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 533, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos p.ev-descricao {
   font-size: 15px;
   color: #727272;
@@ -5749,44 +5760,44 @@ nav.pager ul.pager__items li.is-active {
 }
 
 @media only screen and (max-width: 650px) {
-  /* line 535, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 544, cem/assets/scss/_components/_agenda/_calendar.scss */
   .listagem-resultados .box-eventos {
     flex-direction: column;
     padding: 15px 0;
     margin: 0 10px;
   }
-  /* line 540, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 549, cem/assets/scss/_components/_agenda/_calendar.scss */
   .listagem-resultados .box-eventos.new-box {
     padding-bottom: 50px;
   }
-  /* line 542, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 551, cem/assets/scss/_components/_agenda/_calendar.scss */
   .listagem-resultados .box-eventos.new-box > .date-circle {
     margin-bottom: 20px;
   }
-  /* line 545, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 554, cem/assets/scss/_components/_agenda/_calendar.scss */
   .listagem-resultados .box-eventos.new-box > .evento-infos {
     padding: 0;
   }
-  /* line 550, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 559, cem/assets/scss/_components/_agenda/_calendar.scss */
   .listagem-resultados .box-eventos .ev-periodo {
     flex: auto;
     width: 100%;
     padding: 0 0 10px;
   }
-  /* line 556, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 565, cem/assets/scss/_components/_agenda/_calendar.scss */
   .listagem-resultados .box-eventos p.ev-descricao {
     padding: 0;
     margin: 0;
   }
 }
 
-/* line 562, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 571, cem/assets/scss/_components/_agenda/_calendar.scss */
 .ev-date-box + .ev-date-box {
   padding-left: 18px;
   position: relative;
 }
 
-/* line 567, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 576, cem/assets/scss/_components/_agenda/_calendar.scss */
 .ev-date-box + .ev-date-box:before {
   content: "-";
   position: absolute;
@@ -7588,8 +7599,21 @@ header.header {
   }
 }
 
+@media only screen and (min-width: 0) and (max-width: 980px) {
+  /* line 26, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  .header-top {
+    border-bottom: solid 15px #086aab;
+  }
+  /* line 29, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  .header-top .header-search {
+    width: 100%;
+    max-width: none;
+    margin-top: 30px;
+  }
+}
+
 @media only screen and (min-width: 0) and (max-width: 1220px) {
-  /* line 27, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 35, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top > .inner {
     padding-left: 10px;
     padding-right: 10px;
@@ -7597,56 +7621,67 @@ header.header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 960px) {
-  /* line 27, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 35, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top > .inner {
     display: block;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 960px) {
-  /* line 39, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 47, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .logo {
     float: none;
     margin: 0 auto;
     padding-right: 0;
     width: 420px;
   }
-  /* line 46, cem/assets/scss/_components/_mobile/_header-mobile.scss */
-  .header-top .header-search {
-    max-width: none;
-    margin-top: 30px;
+}
+
+@media only screen and (min-width: 0) and (max-width: 520px) {
+  /* line 61, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  .header-top .logo {
+    padding-right: 50px;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 450px) {
-  /* line 53, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 66, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .logo {
     width: 100%;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 980px) {
-  /* line 59, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 72, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-menu {
     display: none;
   }
 }
 
 /* line 1, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+.header-top {
+  position: relative;
+}
+
+/* line 4, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile {
   display: none;
   width: 100%;
   background-color: #086AAB;
-  border-bottom: solid 5px #CCCCCC;
-  z-index: 7;
-  position: relative;
-  height: 75px;
-  padding: 0 10px;
+  background-color: #075b93;
+  position: absolute;
+  top: 50%;
+  margin-top: -45px;
+  right: 0;
+  width: 35px;
+  height: 50px;
 }
 
-/* line 10, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 22, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger {
   position: relative;
+  position: absolute;
+  right: 10px;
   float: right;
   width: 50px;
   height: 50px;
@@ -7654,19 +7689,22 @@ header.header {
   margin-top: 10px;
   border-radius: 50%;
   cursor: pointer;
+  margin: 0;
+  left: -25px;
 }
 
-/* line 19, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 35, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger > span {
   position: relative;
   display: block;
   width: 30px;
+  width: 17px;
   height: 3px;
   background-color: #fff;
-  margin: 24px auto 0;
+  margin: 24px 0 0 12px;
 }
 
-/* line 26, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 43, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger > span:before, .header-menu-mobile .header-menu-mobile-trigger > span:after {
   position: absolute;
   content: '';
@@ -7678,18 +7716,20 @@ header.header {
   background: inherit;
 }
 
-/* line 37, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 54, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger > span:before {
+  width: 25px;
   margin-top: -8px;
 }
 
-/* line 40, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+/* line 58, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
 .header-menu-mobile .header-menu-mobile-trigger > span:after {
+  width: 10px;
   margin-top: 8px;
 }
 
 @media only screen and (min-width: 0) and (max-width: 980px) {
-  /* line 1, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
+  /* line 4, cem/assets/scss/_components/_mobile/_header-mobile-menu-trigger.scss */
   .header-menu-mobile {
     display: block;
   }
@@ -7915,6 +7955,159 @@ header.header {
   font-size: 13px;
   word-break: break-all;
   white-space: normal;
+}
+
+/* line 1, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.menu-side-bar-mobile {
+  display: none;
+}
+
+@media only screen and (min-width: 0) and (max-width: 768px) {
+  /* line 8, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .quem-somos-content .menu-side-bar-mobile {
+    display: block;
+    padding: 0 0 25px;
+  }
+  /* line 18, cem/assets/scss/_helpers/_mixin.scss */
+  .quem-somos-content .menu-side-bar-mobile:before, .quem-somos-content .menu-side-bar-mobile:after {
+    content: " ";
+    display: table;
+  }
+  /* line 23, cem/assets/scss/_helpers/_mixin.scss */
+  .quem-somos-content .menu-side-bar-mobile:after {
+    clear: both;
+  }
+  /* line 26, cem/assets/scss/_helpers/_mixin.scss */
+  .quem-somos-content .menu-side-bar-mobile {
+    *zoom: 1;
+  }
+  /* line 14, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .quem-somos-content .menu-side-bar-mobile-trigger {
+    float: left;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #086aab;
+    color: #ffffff;
+    border-radius: 50px;
+    height: 40px;
+    text-align: center;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+  /* line 28, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .quem-somos-content .menu-side-bar-mobile-trigger > span {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding-left: 25px;
+  }
+  /* line 34, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .quem-somos-content .menu-side-bar-mobile-trigger > span .icon {
+    position: absolute;
+    display: block;
+    width: 30px;
+    width: 13px;
+    height: 3px;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    margin: 8px 0 0 -3px;
+  }
+  /* line 45, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .quem-somos-content .menu-side-bar-mobile-trigger > span .icon:before, .quem-somos-content .menu-side-bar-mobile-trigger > span .icon:after {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    background: inherit;
+  }
+  /* line 57, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .quem-somos-content .menu-side-bar-mobile-trigger > span .icon:before {
+    width: 20px;
+    margin-top: -6px;
+  }
+  /* line 62, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .quem-somos-content .menu-side-bar-mobile-trigger > span .icon:after {
+    width: 8px;
+    margin-top: 6px;
+  }
+}
+
+@media only screen and (min-width: 0) and (max-width: 768px) {
+  /* line 72, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+  .que-somos-menu-col {
+    display: none;
+  }
+}
+
+/* line 85, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.show-mobile-menu-side-bar {
+  overflow: hidden;
+}
+
+/* line 92, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.show-mobile-menu-side-bar .que-somos-menu-col {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 10;
+  background-color: #fff;
+  padding-top: 60px;
+  padding-left: 0;
+  padding-right: 0;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+/* line 119, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.show-mobile-menu-side-bar .menu-side-bar-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  padding: 0;
+}
+
+/* line 126, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger {
+  margin: 15px;
+}
+
+/* line 130, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon {
+  background: transparent;
+}
+
+/* line 133, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon:before, .show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon:after {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 3px;
+  background: #ffffff;
+  transform-origin: center;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+/* line 149, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon:before {
+  transform: rotate(45deg);
+}
+
+/* line 153, cem/assets/scss/_components/_mobile/_interna-menu.scss */
+.show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon:after {
+  transform: rotate(-45deg);
 }
 
 /*# sourceMappingURL=../../../sass */
