@@ -7592,19 +7592,33 @@ header.header {
   }
 }
 
+/* line 12, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+.header-top-links .contact-translate ul li.header-top-btn-contact {
+  padding: 0;
+  width: 27px;
+  margin-right: 15px;
+}
+
+/* line 16, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+.header-top-links .contact-translate ul li.header-top-btn-contact a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 @media only screen and (min-width: 0) and (max-width: 470px) {
-  /* line 14, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 20, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top-links .contact-translate ul li.header-top-btn-contact a span {
     display: none;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 980px) {
-  /* line 26, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 32, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top {
     border-bottom: solid 15px #086aab;
   }
-  /* line 29, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 35, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .header-search {
     width: 100%;
     max-width: none;
@@ -7613,7 +7627,7 @@ header.header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 1220px) {
-  /* line 35, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 41, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top > .inner {
     padding-left: 10px;
     padding-right: 10px;
@@ -7621,14 +7635,14 @@ header.header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 960px) {
-  /* line 35, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 41, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top > .inner {
     display: block;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 960px) {
-  /* line 47, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 53, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .logo {
     float: none;
     margin: 0 auto;
@@ -7638,21 +7652,21 @@ header.header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 520px) {
-  /* line 61, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 67, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .logo {
     padding-right: 50px;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 450px) {
-  /* line 66, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 72, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .logo {
     width: 100%;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 980px) {
-  /* line 72, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 78, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-menu {
     display: none;
   }
@@ -8108,6 +8122,53 @@ header.header {
 /* line 153, cem/assets/scss/_components/_mobile/_interna-menu.scss */
 .show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon:after {
   transform: rotate(-45deg);
+}
+
+/* line 39, cem/assets/scss/estilos.scss */
+.section-publicacoes .item-list ol,
+.section-publicacoes .item-list ul {
+  padding: 0 10px;
+  margin: 0;
+  list-style: none;
+}
+
+/* line 45, cem/assets/scss/estilos.scss */
+.section-publicacoes .item-list li {
+  font-size: 15px;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: dashed 1px #cccccc;
+  display: block;
+}
+
+/* line 53, cem/assets/scss/estilos.scss */
+.section-publicacoes .row.quem-somos-perfis-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 57, cem/assets/scss/estilos.scss */
+.section-publicacoes .row.quem-somos-perfis-content .views-element-container header {
+  padding: 25px 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #086aab;
+}
+
+/* line 69, cem/assets/scss/estilos.scss */
+.section-download-de-dados .views-element-container header {
+  padding: 25px 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #086aab;
+}
+
+/* line 79, cem/assets/scss/estilos.scss */
+.download-items-wrapper header {
+  padding: 25px 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #086aab;
 }
 
 /*# sourceMappingURL=../../../sass */
