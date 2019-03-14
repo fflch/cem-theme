@@ -70,10 +70,11 @@
                                           {{ drupal_view('evento','bloco_evento_home',language) }}
                                           {# <!-- home agenda item end --> #}
                                             {% trans %}
-                                              <a href="#" class="link-more">agenda completa</a>
+                                              <a href="/{{ language }}/difusao-cientifica/agenda-semanal" class="link-more">agenda completa</a>
                                             {% endtrans %}
                                         
                                         </div>
+                                    </div>
 							  </div>
 								{# <!-- side bar agenda end --> #}
 
@@ -83,7 +84,7 @@
 											{# <!-- side bar noticia recente item init --> #}
 											{{ drupal_view('noticia','bloco_noticia_interna',language) }}
 											{# <!-- side bar noticia recente item end --> #}
-											<a href="#" class="link-more">mais notícias</a>
+											<a href="/{{ language }}/noticia" class="link-more">mais notícias</a>
 										</div>
 								</div>
 								{# <!-- side bar  noticias recentes end --> #}
