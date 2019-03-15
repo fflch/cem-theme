@@ -7591,33 +7591,31 @@ header.header {
   }
 }
 
-/* line 12, cem/assets/scss/_components/_mobile/_header-mobile.scss */
-.header-top-links .contact-translate ul li.header-top-btn-contact {
-  padding: 0;
-  width: 27px;
-  margin-right: 15px;
-}
-
-/* line 16, cem/assets/scss/_components/_mobile/_header-mobile.scss */
-.header-top-links .contact-translate ul li.header-top-btn-contact a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
 @media only screen and (min-width: 0) and (max-width: 470px) {
-  /* line 20, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 12, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  .header-top-links .contact-translate ul li.header-top-btn-contact {
+    padding: 0;
+    width: 27px;
+    margin-right: 15px;
+  }
+  /* line 17, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  .header-top-links .contact-translate ul li.header-top-btn-contact a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  /* line 21, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top-links .contact-translate ul li.header-top-btn-contact a span {
     display: none;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 980px) {
-  /* line 32, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 34, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top {
     border-bottom: solid 15px #086aab;
   }
-  /* line 35, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 37, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .header-search {
     width: 100%;
     max-width: none;
@@ -7626,7 +7624,7 @@ header.header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 1220px) {
-  /* line 41, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 43, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top > .inner {
     padding-left: 10px;
     padding-right: 10px;
@@ -7634,14 +7632,14 @@ header.header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 960px) {
-  /* line 41, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 43, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top > .inner {
     display: block;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 960px) {
-  /* line 53, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 55, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .logo {
     float: none;
     margin: 0 auto;
@@ -7651,21 +7649,21 @@ header.header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 520px) {
-  /* line 67, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 69, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .logo {
     padding-right: 50px;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 450px) {
-  /* line 72, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 74, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .logo {
     width: 100%;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 980px) {
-  /* line 78, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 80, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-menu {
     display: none;
   }
