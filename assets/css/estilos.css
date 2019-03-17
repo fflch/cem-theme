@@ -4942,7 +4942,7 @@ nav.pager ul.pager__items li.is-active {
 /* line 24, cem/assets/scss/_components/_agenda/_agenda-item.scss */
 .agenda-slider .inner button.slick-arrow:before {
   display: block;
-  content: "";
+  content: '';
   width: 62px;
   height: 62px;
   background-image: url(../img/arrows-circle-big.png);
@@ -4974,6 +4974,7 @@ nav.pager ul.pager__items li.is-active {
 /* line 52, cem/assets/scss/_components/_agenda/_agenda-item.scss */
 .agenda-item {
   float: left;
+  width: 25%;
   height: 280px;
   position: relative;
 }
@@ -5006,15 +5007,15 @@ nav.pager ul.pager__items li.is-active {
   margin: 0 auto 0;
   background-color: #fff;
   border-radius: 50%;
-  box-shadow: inset 0px 0px 0px 3px #e1e1e1;
+  box-shadow: inset 0px 0px 0px 3px #E1E1E1;
   overflow: hidden;
 }
 
 /* line 82, cem/assets/scss/_components/_agenda/_agenda-item.scss */
 .agenda-item .days-wrapper .days > .day {
-  font-family: "Titillium Web", sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   font-weight: 600;
-  color: #002a4a;
+  color: #002A4A;
   text-align: center;
   font-size: 26px;
   line-height: 22px;
@@ -5038,14 +5039,14 @@ nav.pager ul.pager__items li.is-active {
   display: block;
   font-size: 20px;
   font-weight: 900;
-  color: #4c9aa0;
+  color: #4C9AA0;
 }
 
 /* line 106, cem/assets/scss/_components/_agenda/_agenda-item.scss */
 .agenda-item .days-wrapper .days > .day > .month-element {
   font-size: 11px;
   text-transform: capitalize;
-  color: #6a6a6a;
+  color: #6A6A6A;
   font-weight: 700;
 }
 
@@ -5056,7 +5057,7 @@ nav.pager ul.pager__items li.is-active {
 
 /* line 114, cem/assets/scss/_components/_agenda/_agenda-item.scss */
 .agenda-item .days-wrapper .days > .day + .day:before {
-  content: "-";
+  content: '-';
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5083,7 +5084,7 @@ nav.pager ul.pager__items li.is-active {
   position: relative;
   width: 100%;
   height: 70px;
-  border-bottom: dashed 1px #aeaeae;
+  border-bottom: dashed 1px #AEAEAE;
   padding-top: 35px;
   font-size: 13px;
   font-weight: 400;
@@ -5093,14 +5094,14 @@ nav.pager ul.pager__items li.is-active {
 
 /* line 150, cem/assets/scss/_components/_agenda/_agenda-item.scss */
 .agenda-item .infos .category:before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   margin: 0 auto;
   top: 0;
   width: 10px;
   height: 10px;
-  box-shadow: 0 0 0 10px #086aab;
+  box-shadow: 0 0 0 10px #086AAB;
   border-radius: 50%;
   left: 50%;
   margin-left: -5px;
@@ -5140,7 +5141,7 @@ nav.pager ul.pager__items li.is-active {
   margin-right: auto;
   text-align: center;
   font-size: 13px;
-  color: #7f7f7f;
+  color: #7F7F7F;
   border-radius: 4px;
   background-color: #fff;
   padding: 5px 0;
@@ -5148,22 +5149,22 @@ nav.pager ul.pager__items li.is-active {
 
 /* line 201, cem/assets/scss/_components/_agenda/_agenda-item.scss */
 .agenda-item.cursos .infos .category:before, .agenda-item[data-filter="cursos"] .infos .category:before {
-  box-shadow: 0 0 0 10px #61b16f;
+  box-shadow: 0 0 0 10px #61B16F;
 }
 
 /* line 211, cem/assets/scss/_components/_agenda/_agenda-item.scss */
 .agenda-item.palestras .infos .category:before, .agenda-item[data-filter="palestras"] .infos .category:before {
-  box-shadow: 0 0 0 10px #086aab;
+  box-shadow: 0 0 0 10px #086AAB;
 }
 
 /* line 221, cem/assets/scss/_components/_agenda/_agenda-item.scss */
 .agenda-item.eventos .infos .category:before, .agenda-item[data-filter="eventos"] .infos .category:before {
-  box-shadow: 0 0 0 10px #f39507;
+  box-shadow: 0 0 0 10px #F39507;
 }
 
 /* line 231, cem/assets/scss/_components/_agenda/_agenda-item.scss */
 .agenda-item[class="datas comemorativas/feriados"] .infos .category:before, .agenda-item[data-filter="datas comemorativas/feriados"] .infos .category:before {
-  box-shadow: 0 0 0 10px #be120e;
+  box-shadow: 0 0 0 10px #BE120E;
 }
 
 /* line 1, cem/assets/scss/_components/_agenda/_calendar.scss */
@@ -7592,30 +7593,18 @@ header.header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 470px) {
-  /* line 12, cem/assets/scss/_components/_mobile/_header-mobile.scss */
-  .header-top-links .contact-translate ul li.header-top-btn-contact {
-    padding: 0;
-    width: 27px;
-    margin-right: 15px;
-  }
-  /* line 17, cem/assets/scss/_components/_mobile/_header-mobile.scss */
-  .header-top-links .contact-translate ul li.header-top-btn-contact a {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  /* line 21, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 14, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top-links .contact-translate ul li.header-top-btn-contact a span {
     display: none;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 980px) {
-  /* line 34, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 26, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top {
     border-bottom: solid 15px #086aab;
   }
-  /* line 37, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 29, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .header-search {
     width: 100%;
     max-width: none;
@@ -7624,7 +7613,7 @@ header.header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 1220px) {
-  /* line 43, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 35, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top > .inner {
     padding-left: 10px;
     padding-right: 10px;
@@ -7632,14 +7621,14 @@ header.header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 960px) {
-  /* line 43, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 35, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top > .inner {
     display: block;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 960px) {
-  /* line 55, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 47, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .logo {
     float: none;
     margin: 0 auto;
@@ -7649,21 +7638,21 @@ header.header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 520px) {
-  /* line 69, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 61, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .logo {
     padding-right: 50px;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 450px) {
-  /* line 74, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 66, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .logo {
     width: 100%;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 980px) {
-  /* line 80, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 72, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-menu {
     display: none;
   }
@@ -8119,53 +8108,6 @@ header.header {
 /* line 153, cem/assets/scss/_components/_mobile/_interna-menu.scss */
 .show-mobile-menu-side-bar .menu-side-bar-mobile .menu-side-bar-mobile-trigger > span .icon:after {
   transform: rotate(-45deg);
-}
-
-/* line 39, cem/assets/scss/estilos.scss */
-.section-publicacoes .item-list ol,
-.section-publicacoes .item-list ul {
-  padding: 0 10px;
-  margin: 0;
-  list-style: none;
-}
-
-/* line 45, cem/assets/scss/estilos.scss */
-.section-publicacoes .item-list li {
-  font-size: 15px;
-  padding-bottom: 25px;
-  margin-bottom: 25px;
-  border-bottom: dashed 1px #cccccc;
-  display: block;
-}
-
-/* line 53, cem/assets/scss/estilos.scss */
-.section-publicacoes .row.quem-somos-perfis-content {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* line 57, cem/assets/scss/estilos.scss */
-.section-publicacoes .row.quem-somos-perfis-content .views-element-container header {
-  padding: 25px 10px;
-  font-size: 16px;
-  font-weight: 700;
-  color: #086aab;
-}
-
-/* line 69, cem/assets/scss/estilos.scss */
-.section-download-de-dados .views-element-container header {
-  padding: 25px 10px;
-  font-size: 16px;
-  font-weight: 700;
-  color: #086aab;
-}
-
-/* line 79, cem/assets/scss/estilos.scss */
-.download-items-wrapper header {
-  padding: 25px 10px;
-  font-size: 16px;
-  font-weight: 700;
-  color: #086aab;
 }
 
 /*# sourceMappingURL=../../../sass */
