@@ -68,12 +68,14 @@
             &>ul {
                 padding: 90px 15px 10px;
                 display: block;
+
                 @for $i from 1 to 8 {
                     $value: 0.5 + ((1/20) * $i);
+
                     &>li:nth-child(#{$i})>a {
-                      animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) #{$value}s both;
+                        animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) #{$value}s both;
                     }
-                  }
+                }
 
                 &>li {
                     position: relative;
@@ -82,7 +84,7 @@
                     margin-bottom: 20px;
 
                     &:before {
-                        display: none !important;
+                        // display: none !important;
                     }
 
 
@@ -151,20 +153,24 @@
                     }
 
                     &.show-drop-down-mobile {
-                        &>a{
+                        &>a {
                             border-radius: 5px 5px 0 0;
                         }
+
                         &>ul {
                             border-radius: 0 0 5px 5px;
                             position: relative !important;
                             display: block !important;
-                            &>li{
+
+                            &>li {
                                 padding-top: 10px;
                                 padding-bottom: 10px;
-                                &:hover{
+
+                                &:hover {
                                     background-color: #e0e0e0;
                                 }
-                                &>a{
+
+                                &>a {
                                     padding: 20px;
                                     font-size: 13px;
                                     word-break: break-all;
@@ -174,6 +180,154 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    //sections
+    &.section-quem-somos {
+        .header-menu {
+            li {
+                &[data-menu="quem-somos"] {
+                    &::before {
+                        // content: '';
+                        // display: block;
+                        // position: absolute;
+                        // width: 100%;
+                        // height: 5px;
+                        // background-color: #00BAB9;
+                        // bottom: -5px;
+                        // left: 0;
+                        display: none;
+                    }
+
+                    &>a {
+                        background-color: #064c7a;
+                    }
+                }
+
+            }
+        }
+    }
+    &.section-pesquisa {
+        .header-menu {
+            li {
+                &[data-menu="pesquisa"] {
+                    &::before {
+                        // content: '';
+                        // display: block;
+                        // position: absolute;
+                        // width: 100%;
+                        // height: 5px;
+                        // background-color: #00BAB9;
+                        // bottom: -5px;
+                        // left: 0;
+                        display: none;
+                    }
+
+                    &>a {
+                        background-color: #064c7a;
+                    }
+                }
+
+            }
+        }
+    }
+    &.section-publicacoes {
+        .header-menu {
+            li {
+                &[data-menu="publicacoes"] {
+                    &::before {
+                        // content: '';
+                        // display: block;
+                        // position: absolute;
+                        // width: 100%;
+                        // height: 5px;
+                        // background-color: #00BAB9;
+                        // bottom: -5px;
+                        // left: 0;
+                        display: none;
+                    }
+
+                    &>a {
+                        background-color: #064c7a;
+                    }
+                }
+
+            }
+        }
+    }
+    &.section-download-de-dados, 
+    &.section-transferencia-e-dados {
+        .header-menu {
+            li {
+                &[data-menu="download-de-dados"],
+                &[data-menu="transferencia-e-dados"] {
+                    &::before {
+                        // content: '';
+                        // display: block;
+                        // position: absolute;
+                        // width: 100%;
+                        // height: 5px;
+                        // background-color: #00BAB9;
+                        // bottom: -5px;
+                        // left: 0;
+                        display: none;
+                    }
+
+                    &>a {
+                        background-color: #064c7a;
+                    }
+                }
+
+            }
+        }
+    }
+    &.section-difusao-cientifica {
+        .header-menu {
+            li {
+                &[data-menu="difusao-cientifica"] {
+                    &::before {
+                        // content: '';
+                        // display: block;
+                        // position: absolute;
+                        // width: 100%;
+                        // height: 5px;
+                        // background-color: #00BAB9;
+                        // bottom: -5px;
+                        // left: 0;
+                        display: none;
+                    }
+
+                    &>a {
+                        background-color: #064c7a;
+                    }
+                }
+
+            }
+        }
+    }
+    &.section-sistemas-interativos {
+        .header-menu {
+            li {
+                &[data-menu="sistemas-interativos"] {
+                    &::before {
+                        // content: '';
+                        // display: block;
+                        // position: absolute;
+                        // width: 100%;
+                        // height: 5px;
+                        // background-color: #00BAB9;
+                        // bottom: -5px;
+                        // left: 0;
+                        display: none;
+                    }
+
+                    &>a {
+                        background-color: #064c7a;
+                    }
+                }
+
             }
         }
     }

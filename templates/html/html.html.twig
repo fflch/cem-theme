@@ -78,19 +78,19 @@
     set sectionClass = 'section-publicacoes'
   %}
 
-  {% elseif  ('/download-de-dados' in bodyUrl) or ('/controle-acesso' in bodyUrl) %} 
+  {% elseif  ('/download-de-dados' in bodyUrl) or ('/controle-acesso' in bodyUrl) or ('mapas-prontos' in bodyUrl) or ('downloads-de-dados' in bodyUrl) %} 
 
   {% 
     set sectionClass = 'section-download-de-dados section-transferência-e-dados'
   %}
 
-  {% elseif  ('/difusao-cientifica' in bodyUrl) %} 
+  {% elseif  ('/difusao-cientifica' in bodyUrl) or ('/agenda-semanal' in bodyUrl) or ('/node/45' in bodyUrl) or ('/cem-na-midia' in bodyUrl) or ('/noticias' or bodyUrl)%} 
 
   {% 
     set sectionClass = 'section-difusao-cientifica'
   %}
 
-  {% elseif  ('/sistemas-interativos' in bodyUrl) %} 
+  {% elseif  ('/sistemas-interativos' in bodyUrl) or ('/difusao-cientifica/research-briefing' in bodyUrl) %} 
 
   {% 
     set sectionClass = 'section-sistemas-interativos'
@@ -117,7 +117,7 @@
       <meta property="og:description"   content="Centro de Estudos da Metrópole" />
       <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
   </head>
-  <body{{ attributes }} class="{{ sectionClass }}">
+  <body{{ attributes }} class="{{ sectionClass }}" data-url="{{ bodyUrl }}">
 
   <header class="header">
     <div class="header-top-links">
