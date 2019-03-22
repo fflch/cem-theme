@@ -7591,33 +7591,31 @@ header.header {
   }
 }
 
-/* line 12, cem/assets/scss/_components/_mobile/_header-mobile.scss */
-.header-top-links .contact-translate ul li.header-top-btn-contact {
-  padding: 0;
-  width: 27px;
-  margin-right: 15px;
-}
-
-/* line 16, cem/assets/scss/_components/_mobile/_header-mobile.scss */
-.header-top-links .contact-translate ul li.header-top-btn-contact a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
 @media only screen and (min-width: 0) and (max-width: 470px) {
-  /* line 20, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 12, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  .header-top-links .contact-translate ul li.header-top-btn-contact {
+    padding: 0;
+    width: 27px;
+    margin-right: 15px;
+  }
+  /* line 17, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  .header-top-links .contact-translate ul li.header-top-btn-contact a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  /* line 21, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top-links .contact-translate ul li.header-top-btn-contact a span {
     display: none;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 980px) {
-  /* line 32, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 34, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top {
     border-bottom: solid 15px #086aab;
   }
-  /* line 35, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 37, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .header-search {
     width: 100%;
     max-width: none;
@@ -7626,7 +7624,7 @@ header.header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 1220px) {
-  /* line 41, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 43, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top > .inner {
     padding-left: 10px;
     padding-right: 10px;
@@ -7634,14 +7632,14 @@ header.header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 960px) {
-  /* line 41, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 43, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top > .inner {
     display: block;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 960px) {
-  /* line 53, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 55, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .logo {
     float: none;
     margin: 0 auto;
@@ -7651,21 +7649,21 @@ header.header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 520px) {
-  /* line 67, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 69, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .logo {
     padding-right: 50px;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 450px) {
-  /* line 72, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 74, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-top .logo {
     width: 100%;
   }
 }
 
 @media only screen and (min-width: 0) and (max-width: 980px) {
-  /* line 78, cem/assets/scss/_components/_mobile/_header-mobile.scss */
+  /* line 80, cem/assets/scss/_components/_mobile/_header-mobile.scss */
   .header-menu {
     display: none;
   }
@@ -7830,42 +7828,42 @@ header.header {
   display: block;
 }
 
-/* line 73, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 75, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li:nth-child(1) > a {
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.55s both;
 }
 
-/* line 73, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 75, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li:nth-child(2) > a {
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s both;
 }
 
-/* line 73, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 75, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li:nth-child(3) > a {
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.65s both;
 }
 
-/* line 73, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 75, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li:nth-child(4) > a {
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s both;
 }
 
-/* line 73, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 75, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li:nth-child(5) > a {
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.75s both;
 }
 
-/* line 73, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 75, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li:nth-child(6) > a {
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s both;
 }
 
-/* line 73, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 75, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li:nth-child(7) > a {
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.85s both;
 }
 
-/* line 78, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 80, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li {
   position: relative;
   width: 100%;
@@ -7873,12 +7871,7 @@ header.header {
   margin-bottom: 20px;
 }
 
-/* line 84, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
-.show-mobile-menu .header-menu > .inner > ul > li:before {
-  display: none !important;
-}
-
-/* line 90, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 92, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li > a {
   text-align: center;
   border-radius: 5px;
@@ -7888,12 +7881,12 @@ header.header {
   font-weight: 700;
 }
 
-/* line 99, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 101, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li > a[data-js="has-submenu"]:after {
   display: none;
 }
 
-/* line 104, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 106, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li > a .menu-mobile-open-drop {
   display: block;
   display: flex;
@@ -7908,14 +7901,14 @@ header.header {
   cursor: pointer;
 }
 
-/* line 117, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 119, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li > a .menu-mobile-open-drop > span {
   position: relative;
   width: 30px;
   height: 2px;
 }
 
-/* line 122, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 124, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li > a .menu-mobile-open-drop > span:before, .show-mobile-menu .header-menu > .inner > ul > li > a .menu-mobile-open-drop > span:after {
   position: absolute;
   content: '';
@@ -7929,45 +7922,105 @@ header.header {
   transform-origin: center;
 }
 
-/* line 136, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 138, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li > a .menu-mobile-open-drop > span:before {
   transform: rotate(90deg);
 }
 
-/* line 148, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 150, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li:hover > ul {
   display: none;
 }
 
-/* line 154, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 156, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li.show-drop-down-mobile > a {
   border-radius: 5px 5px 0 0;
 }
 
-/* line 157, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 160, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li.show-drop-down-mobile > ul {
   border-radius: 0 0 5px 5px;
   position: relative !important;
   display: block !important;
 }
 
-/* line 161, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 165, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li.show-drop-down-mobile > ul > li {
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-/* line 164, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 169, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li.show-drop-down-mobile > ul > li:hover {
   background-color: #e0e0e0;
 }
 
-/* line 167, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 173, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li.show-drop-down-mobile > ul > li > a {
   padding: 20px;
   font-size: 13px;
   word-break: break-all;
   white-space: normal;
+}
+
+/* line 192, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+.show-mobile-menu.section-quem-somos .header-menu li[data-menu="quem-somos"]::before {
+  display: none;
+}
+
+/* line 204, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+.show-mobile-menu.section-quem-somos .header-menu li[data-menu="quem-somos"] > a {
+  background-color: #064c7a;
+}
+
+/* line 216, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+.show-mobile-menu.section-pesquisa .header-menu li[data-menu="pesquisa"]::before {
+  display: none;
+}
+
+/* line 228, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+.show-mobile-menu.section-pesquisa .header-menu li[data-menu="pesquisa"] > a {
+  background-color: #064c7a;
+}
+
+/* line 240, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+.show-mobile-menu.section-publicacoes .header-menu li[data-menu="publicacoes"]::before {
+  display: none;
+}
+
+/* line 252, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+.show-mobile-menu.section-publicacoes .header-menu li[data-menu="publicacoes"] > a {
+  background-color: #064c7a;
+}
+
+/* line 266, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+.show-mobile-menu.section-download-de-dados .header-menu li[data-menu="download-de-dados"]::before, .show-mobile-menu.section-download-de-dados .header-menu li[data-menu="transferencia-e-dados"]::before, .show-mobile-menu.section-transferencia-e-dados .header-menu li[data-menu="download-de-dados"]::before, .show-mobile-menu.section-transferencia-e-dados .header-menu li[data-menu="transferencia-e-dados"]::before {
+  display: none;
+}
+
+/* line 278, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+.show-mobile-menu.section-download-de-dados .header-menu li[data-menu="download-de-dados"] > a, .show-mobile-menu.section-download-de-dados .header-menu li[data-menu="transferencia-e-dados"] > a, .show-mobile-menu.section-transferencia-e-dados .header-menu li[data-menu="download-de-dados"] > a, .show-mobile-menu.section-transferencia-e-dados .header-menu li[data-menu="transferencia-e-dados"] > a {
+  background-color: #064c7a;
+}
+
+/* line 290, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+.show-mobile-menu.section-difusao-cientifica .header-menu li[data-menu="difusao-cientifica"]::before {
+  display: none;
+}
+
+/* line 302, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+.show-mobile-menu.section-difusao-cientifica .header-menu li[data-menu="difusao-cientifica"] > a {
+  background-color: #064c7a;
+}
+
+/* line 314, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+.show-mobile-menu.section-sistemas-interativos .header-menu li[data-menu="sistemas-interativos"]::before {
+  display: none;
+}
+
+/* line 326, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+.show-mobile-menu.section-sistemas-interativos .header-menu li[data-menu="sistemas-interativos"] > a {
+  background-color: #064c7a;
 }
 
 /* line 1, cem/assets/scss/_components/_mobile/_interna-menu.scss */
