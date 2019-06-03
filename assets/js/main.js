@@ -1,6 +1,10 @@
 (function(window, document, $) {
   "use strict";
   if ($(".accordion").length) {
+    jQuery(".accordion").each(function() {
+      jQuery(this).addClass("open");
+    });
+
     $(".accordion .title").on("click", this, function() {
       console.log(this);
 
@@ -528,19 +532,43 @@
 })(window, document, jQuery);
 (function(window, document, $) {
   "use strict";
+
+  jQuery(".quem-somos-conteudo-col .field_pos_doutorandos").each(function() {
+    jQuery(this).addClass("open");
+  });
+
   $(".quem-somos-conteudo-col .field_pos_doutorandos").on("click", function() {
     $(this).toggleClass("open");
   });
+
+  jQuery(".quem-somos-conteudo-col .field_bolsistas_e_pesquisadores").each(
+    function() {
+      jQuery(this).addClass("open");
+    }
+  );
+
   $(".quem-somos-conteudo-col .field_bolsistas_e_pesquisadores").on(
     "click",
     function() {
       $(this).toggleClass("open");
     }
   );
+
+  jQuery(".quem-somos-conteudo-col .field_pesquisadores_associados").each(
+    function() {
+      jQuery(this).addClass("open");
+    }
+  );
   $(".quem-somos-conteudo-col .field_pesquisadores_associados").on(
     "click",
     function() {
       $(this).toggleClass("open");
+    }
+  );
+
+  jQuery(".quem-somos-conteudo-col .field_pesquisadores_visitantes").each(
+    function() {
+      jQuery(this).addClass("open");
     }
   );
   $(".quem-somos-conteudo-col .field_pesquisadores_visitantes").on(

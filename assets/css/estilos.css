@@ -2348,9 +2348,24 @@ nav.pager ul.pager__items li {
   background-image: none;
   display: inline;
   list-style-type: none;
+  padding: 0.5em;
 }
 
-/* line 45, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 32, cem/assets/scss/_components/_paginacao/__global.scss */
+.item-list .pager li a,
+nav.pager ul.pager__items li a {
+  background-color: transparent !important;
+  border: 0 !important;
+}
+
+/* line 35, cem/assets/scss/_components/_paginacao/__global.scss */
+.item-list .pager li a:focus,
+nav.pager ul.pager__items li a:focus {
+  background-color: transparent !important;
+  border: 0 !important;
+}
+
+/* line 42, cem/assets/scss/_components/_paginacao/__global.scss */
 nav.pager ul.pager__items li .visually-hidden {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
@@ -2360,23 +2375,16 @@ nav.pager ul.pager__items li .visually-hidden {
   word-wrap: normal;
 }
 
-/* line 54, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 51, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li,
 nav.pager ul.pager__items li {
-  width: 30px;
-  height: 30px;
-  margin: 0 5px !important;
-  padding: 0 !important;
-}
-
-/* line 61, cem/assets/scss/_components/_paginacao/__global.scss */
-.item-list ul.pager li a,
-nav.pager ul.pager__items li a {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 30px;
   height: 30px;
+  padding: 0 !important;
+  margin: 0 5px !important;
   font-size: 13px;
   font-weight: 500;
   color: #6A6A6A;
@@ -2387,7 +2395,7 @@ nav.pager ul.pager__items li a {
   transition: all 0.2s linear;
 }
 
-/* line 78, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 70, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li.pager-first.first,
 .item-list ul.pager li.pager-last.last,
 nav.pager ul.pager__items li.pager__item--ellipsis,
@@ -2396,12 +2404,12 @@ nav.pager ul.pager__items li.pager__item--last {
   display: none !important;
 }
 
-/* line 86, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 78, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li.pager-ellipsis {
   display: none !important;
 }
 
-/* line 90, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 82, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li.pager-previous,
 .item-list ul.pager li.pager-next,
 nav.pager ul.pager__items li.pager__item--previous,
@@ -2411,7 +2419,7 @@ nav.pager ul.pager__items li.pager__item--next {
   width: auto;
 }
 
-/* line 109, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 101, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li.pager-previous:hover,
 .item-list ul.pager li.pager-next:hover,
 nav.pager ul.pager__items li.pager__item--previous:hover,
@@ -2421,10 +2429,10 @@ nav.pager ul.pager__items li.pager__item--next:hover {
   color: #6A6A6A;
 }
 
-/* line 130, cem/assets/scss/_components/_paginacao/__global.scss */
-.item-list ul.pager li:hover a,
-nav.pager ul.pager__items li:hover a,
-nav.pager ul.pager__items li.is-active a {
+/* line 118, cem/assets/scss/_components/_paginacao/__global.scss */
+.item-list ul.pager li:hover,
+nav.pager ul.pager__items li:hover,
+nav.pager ul.pager__items li.is-active {
   border: solid 2px #086AAB;
   background-color: #086AAB;
   color: #ffffff;
@@ -7820,42 +7828,42 @@ header.header {
   display: block;
 }
 
-/* line 75, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 73, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li:nth-child(1) > a {
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.55s both;
 }
 
-/* line 75, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 73, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li:nth-child(2) > a {
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s both;
 }
 
-/* line 75, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 73, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li:nth-child(3) > a {
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.65s both;
 }
 
-/* line 75, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 73, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li:nth-child(4) > a {
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s both;
 }
 
-/* line 75, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 73, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li:nth-child(5) > a {
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.75s both;
 }
 
-/* line 75, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 73, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li:nth-child(6) > a {
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s both;
 }
 
-/* line 75, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 73, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li:nth-child(7) > a {
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.85s both;
 }
 
-/* line 80, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 78, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li {
   position: relative;
   width: 100%;
@@ -7863,7 +7871,12 @@ header.header {
   margin-bottom: 20px;
 }
 
-/* line 92, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 84, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+.show-mobile-menu .header-menu > .inner > ul > li:before {
+  display: none !important;
+}
+
+/* line 90, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li > a {
   text-align: center;
   border-radius: 5px;
@@ -7873,12 +7886,12 @@ header.header {
   font-weight: 700;
 }
 
-/* line 101, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 99, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li > a[data-js="has-submenu"]:after {
   display: none;
 }
 
-/* line 106, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 104, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li > a .menu-mobile-open-drop {
   display: block;
   display: flex;
@@ -7893,14 +7906,14 @@ header.header {
   cursor: pointer;
 }
 
-/* line 119, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 117, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li > a .menu-mobile-open-drop > span {
   position: relative;
   width: 30px;
   height: 2px;
 }
 
-/* line 124, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 122, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li > a .menu-mobile-open-drop > span:before, .show-mobile-menu .header-menu > .inner > ul > li > a .menu-mobile-open-drop > span:after {
   position: absolute;
   content: '';
@@ -7914,105 +7927,45 @@ header.header {
   transform-origin: center;
 }
 
-/* line 138, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 136, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li > a .menu-mobile-open-drop > span:before {
   transform: rotate(90deg);
 }
 
-/* line 150, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 148, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li:hover > ul {
   display: none;
 }
 
-/* line 156, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 154, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li.show-drop-down-mobile > a {
   border-radius: 5px 5px 0 0;
 }
 
-/* line 160, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 157, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li.show-drop-down-mobile > ul {
   border-radius: 0 0 5px 5px;
   position: relative !important;
   display: block !important;
 }
 
-/* line 165, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 161, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li.show-drop-down-mobile > ul > li {
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-/* line 169, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 164, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li.show-drop-down-mobile > ul > li:hover {
   background-color: #e0e0e0;
 }
 
-/* line 173, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
+/* line 167, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
 .show-mobile-menu .header-menu > .inner > ul > li.show-drop-down-mobile > ul > li > a {
   padding: 20px;
   font-size: 13px;
   word-break: break-all;
   white-space: normal;
-}
-
-/* line 192, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
-.show-mobile-menu.section-quem-somos .header-menu li[data-menu="quem-somos"]::before {
-  display: none;
-}
-
-/* line 204, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
-.show-mobile-menu.section-quem-somos .header-menu li[data-menu="quem-somos"] > a {
-  background-color: #064c7a;
-}
-
-/* line 216, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
-.show-mobile-menu.section-pesquisa .header-menu li[data-menu="pesquisa"]::before {
-  display: none;
-}
-
-/* line 228, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
-.show-mobile-menu.section-pesquisa .header-menu li[data-menu="pesquisa"] > a {
-  background-color: #064c7a;
-}
-
-/* line 240, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
-.show-mobile-menu.section-publicacoes .header-menu li[data-menu="publicacoes"]::before {
-  display: none;
-}
-
-/* line 252, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
-.show-mobile-menu.section-publicacoes .header-menu li[data-menu="publicacoes"] > a {
-  background-color: #064c7a;
-}
-
-/* line 266, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
-.show-mobile-menu.section-download-de-dados .header-menu li[data-menu="download-de-dados"]::before, .show-mobile-menu.section-download-de-dados .header-menu li[data-menu="transferencia-e-dados"]::before, .show-mobile-menu.section-transferencia-e-dados .header-menu li[data-menu="download-de-dados"]::before, .show-mobile-menu.section-transferencia-e-dados .header-menu li[data-menu="transferencia-e-dados"]::before {
-  display: none;
-}
-
-/* line 278, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
-.show-mobile-menu.section-download-de-dados .header-menu li[data-menu="download-de-dados"] > a, .show-mobile-menu.section-download-de-dados .header-menu li[data-menu="transferencia-e-dados"] > a, .show-mobile-menu.section-transferencia-e-dados .header-menu li[data-menu="download-de-dados"] > a, .show-mobile-menu.section-transferencia-e-dados .header-menu li[data-menu="transferencia-e-dados"] > a {
-  background-color: #064c7a;
-}
-
-/* line 290, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
-.show-mobile-menu.section-difusao-cientifica .header-menu li[data-menu="difusao-cientifica"]::before {
-  display: none;
-}
-
-/* line 302, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
-.show-mobile-menu.section-difusao-cientifica .header-menu li[data-menu="difusao-cientifica"] > a {
-  background-color: #064c7a;
-}
-
-/* line 314, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
-.show-mobile-menu.section-sistemas-interativos .header-menu li[data-menu="sistemas-interativos"]::before {
-  display: none;
-}
-
-/* line 326, cem/assets/scss/_components/_mobile/_header-mobile-menu.scss */
-.show-mobile-menu.section-sistemas-interativos .header-menu li[data-menu="sistemas-interativos"] > a {
-  background-color: #064c7a;
 }
 
 /* line 1, cem/assets/scss/_components/_mobile/_interna-menu.scss */
