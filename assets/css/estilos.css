@@ -2444,7 +2444,7 @@ nav.pager ul.pager__items li.is-active a {
   width: 100%;
   padding: 20px;
   background-color: #086AAB;
-  background-image: url(../img/icon-sub.png);
+  /*background-image: url(../img/icon-sub.png);*/
   background-position: right 20px center;
   background-repeat: no-repeat;
   color: #ffffff;
