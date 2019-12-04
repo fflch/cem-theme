@@ -6,9 +6,9 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="breadcrumb">
-                                <a href="/{{ language }}">{% trans %}home{% endtrans %}</a>
+                                <a href="/{{ language }}">{% trans %}Home{% endtrans %}</a>
                                 <a href="/{{ language }}/noticias">{% trans %}notícias em destaque{% endtrans %}</a>
-                                <a href="#">{{ label }}</a>
+                                <span>{{ label }}</span>
                             </div>
                         </div>
                     </div>
@@ -32,9 +32,9 @@
                                     <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartilhar</a></div>
                                 </div>
                                 <div class="social">
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" alt="Compartilhar no facebook" class="facebook"><span>Facebook</span></a>
-                                    <a href="https://twitter.com/intent/tweet?url" target="_blank" class="twitter"><span>Twitter</span></a>
-                                    <a href="https://www.linkedin.com/shareArticle?" target="_blank" class="linkedin"><span>linkedin</span></a>
+                                    <a href="https://www.facebook.com/CemCepid" class="facebook" target="_blank" rel=”noopener noreferrer”><span>Facebook</span></a>
+                                    <a href="https://twitter.com/CEM_CMS" class="twitter" target="_blank" rel=”noopener noreferrer”><span>Twitter</span></a>
+                                    <a href="https://www.linkedin.com/company/centro-de-estudos-da-metropole" class="linkedin" target="_blank" rel=”noopener noreferrer”><span>linkedin</span></a>
                                 </div>
                                 <div class="title">
                                     <h1>
@@ -50,47 +50,43 @@
                             </div>
                             {# <!-- noticia header end --> #}
                             {# <!-- noticia conteudo init --> #}
-							<div class="noticia-conteudo">
-								{{ drupal_field('body','node') }}
-							</div>
+				<div class="noticia-conteudo">
+					{{ drupal_field('body','node') }}
+				</div>
                                 <div class="botao-voltar">
                                     <span>{% trans %}<a id="link-voltar" href="/{{ language }}/noticias">< voltar para notícias{% endtrans %}</a></span>
                                 </div>
                         </div>
-						{# <!-- noticia listagem coluna left end --> #}
-					    {# <!-- noticia listagem coluna right init --> #}
-							<div class="col-md-3 col-xs-12">
-								<div class="side-bar-box agenda">
-                                            {% trans %}
+			{# <!-- noticia listagem coluna left end --> #}
+	
+			{# <!-- noticia listagem coluna right init --> #}
+			<div class="col-md-3 col-xs-12">
+				<div class="side-bar-box agenda">
                                     <div class="header">EVENTOS/AGENDA</div>
-                                            {% endtrans %}
-                                        <div class="box">
-                                        
-                                          {# <!-- home agenda item init --> #}
+                                    <div class="box">
+                                      {# <!-- home agenda item init --> #}
                                           {{ drupal_view('evento','bloco_evento_home',language) }}
                                           {# <!-- home agenda item end --> #}
                                             {% trans %}
                                               <a href="/{{ language }}/difusao-cientifica/agenda-semanal" class="link-more">agenda completa</a>
                                             {% endtrans %}
-                                        
-                                        </div>
                                     </div>
-							  </div>
-								{# <!-- side bar agenda end --> #}
+			  </div>
+			{# <!-- side bar agenda end --> #}
 
-								<div class="side-bar-box recente">
-									<div class="header">Notícias Recentes</div>
-										<div class="box">
-											{# <!-- side bar noticia recente item init --> #}
-											{{ drupal_view('noticia','bloco_noticia_interna',language) }}
-											{# <!-- side bar noticia recente item end --> #}
-											<a href="/{{ language }}/noticia" class="link-more">mais notícias</a>
-										</div>
-								</div>
-								{# <!-- side bar  noticias recentes end --> #}
-							</div>
-						</div>
-					</div>
+			<div class="side-bar-box recente">
+				<div class="header">Notícias Recentes</div>
+				<div class="box">
+					{# <!-- side bar noticia recente item init --> #}
+					{{ drupal_view('noticia','bloco_noticia_interna',language) }}
+					{# <!-- side bar noticia recente item end --> #}
+					<a href="/{{ language }}/noticias" class="link-more">mais notícias</a>
 				</div>
-        </section>
-	</main>
+			</div>
+			{# <!-- side bar  noticias recentes end --> #}
+		  </div>
+	       </div>
+	    </div>
+	  </div>
+       </section>
+</main>
