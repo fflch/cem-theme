@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% if breadcrumb %}
+ <section class="internas-top-header">
+    <div class="inner wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="breadcrumb">
+              {% for item in breadcrumb %}
+                {% if item.url %}
+                  <a href="{{item.url}}"><span>{{item.text}}</span></a>
+                {% else %}
+                  <span>{{ item.text }}</span>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
