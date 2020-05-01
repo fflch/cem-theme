@@ -5,10 +5,11 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h1 class="title-page"><a href="/node/27">{% trans %}quem somos{% endtrans %}</a>
-                            <span class="sub-title"><a href="/node/115">{% trans %}nossa equipe{% endtrans %}</a></span>
-                            {#<span class="sub-title"><a href="{{ term_url }}">{{ pesquisadores }}</a></span>#}
-                            <span class="sub-title"><a href="#">{{ label }}</a></span>
+                         <div class="breadcrumb">
+                             <a href="/{{ language }}">{% trans %}Home{% endtrans %}</a>
+                             <a href="/node/27">{% trans %}quem somos{% endtrans %}</a>
+                             <span class="sub-title">{{ label }}</span>
+                            </div>
                         </h1>
                     </div>
                 </div>
