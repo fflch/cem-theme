@@ -27,29 +27,6 @@
 
 <main class="main">
     <!-- internas top header init -->
-
-    <section class="internas-top-header">
-        <div class="inner wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-12">
-                        {% if pesquisador  %}
-                            <a href="/node/{{ id }}"><h1 class="title-page">{{ hierarquia }}</a><span class="sub-title"><a href="/node/115">{% trans %}Nossa Equipe{% endtrans %}</a></span><span class="sub-title">{{ label }}</span></h1>
-                        {% else %}
-                            {% if menu_lateral_id == 63 %}
-                                <a href="/node/{{ id }}"><h1 class="title-page">{% trans %}Publicações{% endtrans %}</a></h1>
-                            {% elseif difusao_cientifica == 'Agenda' %}
-                                <a href="/node/{{ id }}"><h1 class="title-page">{% trans %}Difusão Científica{% endtrans %}</a></h1>
-                            {% else %}
-                                <a href="/node/{{ id }}"><h1 class="title-page">{{ hierarquia }}</a><span class="sub-title">{{ label }}</span></h1>
-                            {% endif %}
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- internas container init -->
     <section class="internas-container">
         <div class="inner wrapper">
             <div class="container-fluid">
