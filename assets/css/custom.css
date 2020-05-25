@@ -64,3 +64,214 @@ div.quem-somos-conteudo  a{
 #link-voltar {
     color: white;
 }
+
+/*
+    Extends
+*/
+/* line 244, cem/assets/scss/_helpers/_mixin.scss */
+.header-cem-new-slider-quotes .quotes-slider:before, .header-cem-new-slider-quotes .quotes-slider:after {
+    content: " ";
+    display: table;
+  }
+  
+  /* line 249, cem/assets/scss/_helpers/_mixin.scss */
+  .header-cem-new-slider-quotes .quotes-slider:after {
+    clear: both;
+  }
+  
+  /* line 253, cem/assets/scss/_helpers/_mixin.scss */
+  .header-cem-new-slider-quotes .quotes-slider {
+    *zoom: 1;
+  }
+  
+  /* line 3, cem/assets/scss/estilos-2.scss */
+  .header-search {
+    margin-left: auto;
+  }
+  
+  /* line 6, cem/assets/scss/estilos-2.scss */
+  .new-logos {
+    width: 100%;
+    clear: both;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+  }
+  
+  /* line 14, cem/assets/scss/estilos-2.scss */
+  .logo-fflch {
+    float: left;
+    clear: right;
+    width: 40%;
+    max-width: 300px;
+    height: 75px;
+  }
+  
+  /* line 20, cem/assets/scss/estilos-2.scss */
+  .logo-fflch a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../img/logo-fflch.jpeg) center no-repeat;
+    background-size: contain;
+  }
+  
+  /* line 28, cem/assets/scss/estilos-2.scss */
+  .logo-usp {
+    float: left;
+    clear: right;
+    width: 40%;
+    max-width: 234px;
+    height: 75px;
+  }
+  
+  /* line 34, cem/assets/scss/estilos-2.scss */
+  .logo-usp a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../img/logo-usp.jpeg) center no-repeat;
+    background-size: contain;
+  }
+  
+  /* line 42, cem/assets/scss/estilos-2.scss */
+  .header-cem-new-slider-quotes {
+    width: 100%;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+  }
+  
+  /* line 51, cem/assets/scss/estilos-2.scss */
+  .header-cem-new-slider-quotes .logo {
+    float: left;
+    min-height: 65px;
+    margin: 0;
+    padding: 0 0 0 156px;
+    background: url(../img/logo-removebg.png) left center no-repeat;
+    background-size: 169px;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* line 64, cem/assets/scss/estilos-2.scss */
+  .header-cem-new-slider-quotes .logo span.title {
+    display: block;
+    width: 100%;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    color: #303030;
+  }
+  
+  /* line 73, cem/assets/scss/estilos-2.scss */
+  .header-cem-new-slider-quotes .logo span.sub-title {
+    display: block;
+    width: 100%;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #676f72;
+  }
+  
+  /* line 81, cem/assets/scss/estilos-2.scss */
+  .header-cem-new-slider-quotes .quotes-slider {
+    padding-top: 10px;
+    width: 100%;
+  }
+  
+  /* line 85, cem/assets/scss/estilos-2.scss */
+  .header-cem-new-slider-quotes .quotes-slider .quote-item {
+    outline: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+  }
+  
+  /* line 92, cem/assets/scss/estilos-2.scss */
+  .header-cem-new-slider-quotes .quotes-slider .quote-item p {
+    text-align: center;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+  }
+  
+  /* line 99, cem/assets/scss/estilos-2.scss */
+  .header-cem-new-slider-quotes .quotes-slider .slick-dots {
+    z-index: 5;
+    padding: 0;
+    margin: 0;
+    padding-top: 0;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    float: left;
+  }
+  
+  /* line 108, cem/assets/scss/estilos-2.scss */
+  .header-cem-new-slider-quotes .quotes-slider .slick-dots li {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 0 2px;
+  }
+  
+  /* line 113, cem/assets/scss/estilos-2.scss */
+  .header-cem-new-slider-quotes .quotes-slider .slick-dots li button {
+    background: #fff;
+    border: 0;
+    border-radius: 50%;
+    font-size: 0;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    outline: 0;
+    cursor: pointer;
+  }
+  
+  /* line 123, cem/assets/scss/estilos-2.scss */
+  .header-cem-new-slider-quotes .quotes-slider .slick-dots li button:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 0 0 1px;
+  }
+  
+  /* line 133, cem/assets/scss/estilos-2.scss */
+  .header-cem-new-slider-quotes .quotes-slider .slick-dots li.slick-active button {
+    background-color: #086aab;
+    background-color: #929292;
+    border: 0;
+    border-radius: 50%;
+  }
+  
+  /* line 138, cem/assets/scss/estilos-2.scss */
+  .header-cem-new-slider-quotes .quotes-slider .slick-dots li.slick-active button:before {
+    background-color: #086aab;
+    background-color: #929292;
+    border: 0;
+  }
+  
+  /* line 150, cem/assets/scss/estilos-2.scss */
+  .header-menu {
+    background-color: #052e70;
+  }
+  
+  /*# sourceMappingURL=../../../sass */
+.main-title {
+  color: #052e70;
+  font-size: 40px;
+}
+  

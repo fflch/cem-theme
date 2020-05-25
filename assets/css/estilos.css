@@ -994,7 +994,7 @@ blockquote p {
 
 /* line 9, cem/assets/scss/_components/_home-call-boxes/__global.scss */
 .home-call-boxes > .inner {
-  min-height: 230px;
+  min-height: 102px;
   display: flex;
   align-items: center;
   justify-content: space-around;

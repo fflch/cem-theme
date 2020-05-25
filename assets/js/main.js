@@ -587,3 +587,19 @@
         });
     }
 })(window, document, jQuery);
+
+(function (window, document, $) {
+  "use strict";
+  if ($(".quotes-slider").length) {
+    $(".quotes-slider>div.views-element-container>div").slick({
+      autoplay: true,
+      autoplaySpeed: 6000,
+      dots: true,
+      infinite: true,
+      speed: 600,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+    });
+  }
+})(window, document, jQuery);

@@ -2,6 +2,15 @@
 {% set language = language.getId() %}
 <div class="layout-container">
 
+      <!-- **** NOVO 2020 SLIDER DE QUOTES E LOCO CEM INIT **** -->
+      <div class="header-cem-new-slider-quotes">
+        <h1 class="logo">
+          <span class="title">CEM</span>
+          <!--<span class="sub-title"> centro de estudo da metrópole</span>-->
+        </h1>
+      </div>
+      <!-- **** NOVO 2020 SLIDER DE QUOTES E LOCO CEM END **** -->
+
   <main role="main page-front">
     <section class="container-fluid home-slider">
       <div class="row">
@@ -10,6 +19,15 @@
         </div>
       </div>
     </section>
+
+      <!-- **** NOVO 2020 SLIDER DE QUOTES E LOCO CEM INIT **** -->
+    <div class="header-cem-new-slider-quotes">
+      <div class="quotes-slider">
+        {{ drupal_view('frases', 'bloco', language) }}
+      </div>
+    </div>
+    <!-- **** NOVO 2020 SLIDER DE QUOTES E LOCO CEM END **** -->
+
     <section class="home-call-boxes">
       <span class="detail-left"></span>
       <span class="detail-right"></span>
@@ -17,6 +35,9 @@
             {# drupal_entity('block', 'sidebar_left') #}
             {# drupal_entity('block', 'sidebar_right') #}
     </section>
+
+  
+
     <!-- home call boxes end -->
     <!-- home news and agenda init -->
     <div class="container-fluid home-news-and-agenda">
