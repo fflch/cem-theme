@@ -24,7 +24,7 @@
  *
  * @ingroup themeable
  */
-#} 
+#}
 
 
 
@@ -52,53 +52,53 @@
 {%- endmacro %}
 
 
-{% 
-  set bodyUrl =  path('<current>') 
+{%
+  set bodyUrl =  path('<current>')
 %}
 
-{% 
+{%
     set sectionClass = ''
   %}
 
-  {% if  ('/quem-somos' in bodyUrl) %} 
+  {% if  ('/quem-somos' in bodyUrl) %}
 
-  {% 
+  {%
     set sectionClass = 'section-quem-somos'
   %}
-  
-  {% elseif  ('/pesquisa' in bodyUrl) %} 
 
-  {% 
+  {% elseif  ('/pesquisa' in bodyUrl) %}
+
+  {%
     set sectionClass = 'section-pesquisa'
   %}
 
-  {% elseif  ('/publicacoes' in bodyUrl) %} 
+  {% elseif  ('/publicacoes' in bodyUrl) %}
 
-  {% 
+  {%
     set sectionClass = 'section-publicacoes'
   %}
 
-  {% elseif  ('/download-de-dados' in bodyUrl) or ('/controle-acesso' in bodyUrl) or ('mapas-prontos' in bodyUrl) or ('downloads-de-dados' in bodyUrl) %} 
+  {% elseif  ('/download-de-dados' in bodyUrl) or ('/controle-acesso' in bodyUrl) or ('mapas-prontos' in bodyUrl) or ('downloads-de-dados' in bodyUrl) %}
 
-  {% 
+  {%
     set sectionClass = 'section-download-de-dados section-transferência-e-dados'
   %}
 
-  {% elseif  ('/difusao-cientifica' in bodyUrl) or ('/agenda-semanal' in bodyUrl) or ('/node/45' in bodyUrl) or ('/cem-na-midia' in bodyUrl) or ('/noticias' or bodyUrl)%} 
+  {% elseif  ('/difusao-cientifica' in bodyUrl) or ('/agenda-semanal' in bodyUrl) or ('/node/45' in bodyUrl) or ('/cem-na-midia' in bodyUrl) or ('/noticias' or bodyUrl)%}
 
-  {% 
+  {%
     set sectionClass = 'section-difusao-cientifica'
   %}
 
-  {% elseif  ('/sistemas-interativos' in bodyUrl) or ('/difusao-cientifica/research-briefing' in bodyUrl) %} 
+  {% elseif  ('/sistemas-interativos' in bodyUrl) or ('/difusao-cientifica/research-briefing' in bodyUrl) %}
 
-  {% 
+  {%
     set sectionClass = 'section-sistemas-interativos'
   %}
 
-  {% else %} 
+  {% else %}
 
-  {% 
+  {%
     set sectionClass = 'section-normal'
   %}
 
@@ -160,7 +160,9 @@
               <a href="//fflch.usp.br"></a>
             </div>
             <h1>
-              <span class="title main-title"> Centro de Estudos da Metrópole</span>
+              <a  href="/">
+                <span class="title main-title">Centro de Estudos da Metrópole</span>
+              </a>
               <!--<span class="sub-title"> CEM</span>-->
             </h1>
             <div class="logo-usp">
