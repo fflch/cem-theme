@@ -73,22 +73,22 @@ div.quem-somos-conteudo  a{
     content: " ";
     display: table;
   }
-  
+
   /* line 249, cem/assets/scss/_helpers/_mixin.scss */
   .header-cem-new-slider-quotes .quotes-slider:after {
     clear: both;
   }
-  
+
   /* line 253, cem/assets/scss/_helpers/_mixin.scss */
   .header-cem-new-slider-quotes .quotes-slider {
     *zoom: 1;
   }
-  
+
   /* line 3, cem/assets/scss/estilos-2.scss */
   .header-search {
     margin-left: auto;
   }
-  
+
   /* line 6, cem/assets/scss/estilos-2.scss */
   .new-logos {
     width: 100%;
@@ -96,9 +96,9 @@ div.quem-somos-conteudo  a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
+    padding-top: 20px;
   }
-  
+
   /* line 14, cem/assets/scss/estilos-2.scss */
   .logo-fflch {
     float: left;
@@ -107,16 +107,16 @@ div.quem-somos-conteudo  a{
     max-width: 300px;
     height: 75px;
   }
-  
+
   /* line 20, cem/assets/scss/estilos-2.scss */
   .logo-fflch a {
     display: block;
-    width: 100%;
-    height: 100%;
-    background: url(../img/logo-fflch.jpeg) center no-repeat;
+    width: 78%;
+    height: 78%;
+    background: url(../img/logos/fflch.png) center no-repeat;
     background-size: contain;
   }
-  
+
   /* line 28, cem/assets/scss/estilos-2.scss */
   .logo-usp {
     float: left;
@@ -125,27 +125,27 @@ div.quem-somos-conteudo  a{
     max-width: 234px;
     height: 75px;
   }
-  
+
   /* line 34, cem/assets/scss/estilos-2.scss */
   .logo-usp a {
     display: block;
-    width: 100%;
-    height: 100%;
-    background: url(../img/logo-usp.jpeg) center no-repeat;
+    width: 78%;
+    height: 78%;
+    background: url(../img/logos/usp.png) center no-repeat;
     background-size: contain;
   }
-  
+
   /* line 42, cem/assets/scss/estilos-2.scss */
   .header-cem-new-slider-quotes {
     width: 100%;
-    background-color: #ccc;
+   /*background-color: #ccc;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5px 15px;
   }
-  
+
   /* line 51, cem/assets/scss/estilos-2.scss */
   .header-cem-new-slider-quotes .logo {
     float: left;
@@ -160,7 +160,7 @@ div.quem-somos-conteudo  a{
     justify-content: center;
     align-items: flex-start;
   }
-  
+
   /* line 64, cem/assets/scss/estilos-2.scss */
   .header-cem-new-slider-quotes .logo span.title {
     display: block;
@@ -171,7 +171,7 @@ div.quem-somos-conteudo  a{
     line-height: 30px;
     color: #303030;
   }
-  
+
   /* line 73, cem/assets/scss/estilos-2.scss */
   .header-cem-new-slider-quotes .logo span.sub-title {
     display: block;
@@ -181,13 +181,13 @@ div.quem-somos-conteudo  a{
     font-size: 15px;
     color: #676f72;
   }
-  
+
   /* line 81, cem/assets/scss/estilos-2.scss */
   .header-cem-new-slider-quotes .quotes-slider {
     padding-top: 10px;
     width: 100%;
   }
-  
+
   /* line 85, cem/assets/scss/estilos-2.scss */
   .header-cem-new-slider-quotes .quotes-slider .quote-item {
     outline: 0;
@@ -197,7 +197,7 @@ div.quem-somos-conteudo  a{
     font-family: "Roboto", sans-serif;
     font-weight: 500;
   }
-  
+
   /* line 92, cem/assets/scss/estilos-2.scss */
   .header-cem-new-slider-quotes .quotes-slider .quote-item p {
     text-align: center;
@@ -205,7 +205,7 @@ div.quem-somos-conteudo  a{
     font-weight: inherit;
     color: inherit;
   }
-  
+
   /* line 99, cem/assets/scss/estilos-2.scss */
   .header-cem-new-slider-quotes .quotes-slider .slick-dots {
     z-index: 5;
@@ -217,7 +217,7 @@ div.quem-somos-conteudo  a{
     width: 100%;
     float: left;
   }
-  
+
   /* line 108, cem/assets/scss/estilos-2.scss */
   .header-cem-new-slider-quotes .quotes-slider .slick-dots li {
     display: inline-block;
@@ -225,7 +225,7 @@ div.quem-somos-conteudo  a{
     height: 14px;
     margin: 0 2px;
   }
-  
+
   /* line 113, cem/assets/scss/estilos-2.scss */
   .header-cem-new-slider-quotes .quotes-slider .slick-dots li button {
     background: #fff;
@@ -238,7 +238,7 @@ div.quem-somos-conteudo  a{
     outline: 0;
     cursor: pointer;
   }
-  
+
   /* line 123, cem/assets/scss/estilos-2.scss */
   .header-cem-new-slider-quotes .quotes-slider .slick-dots li button:before {
     content: "";
@@ -248,7 +248,7 @@ div.quem-somos-conteudo  a{
     border-radius: 50%;
     margin: 0 0 0 1px;
   }
-  
+
   /* line 133, cem/assets/scss/estilos-2.scss */
   .header-cem-new-slider-quotes .quotes-slider .slick-dots li.slick-active button {
     background-color: #086aab;
@@ -256,22 +256,21 @@ div.quem-somos-conteudo  a{
     border: 0;
     border-radius: 50%;
   }
-  
+
   /* line 138, cem/assets/scss/estilos-2.scss */
   .header-cem-new-slider-quotes .quotes-slider .slick-dots li.slick-active button:before {
     background-color: #086aab;
     background-color: #929292;
     border: 0;
   }
-  
+
   /* line 150, cem/assets/scss/estilos-2.scss */
   .header-menu {
     background-color: #052e70;
   }
-  
+
   /*# sourceMappingURL=../../../sass */
 .main-title {
   color: #052e70;
-  font-size: 40px;
+  font-size: 36px;
 }
-  
