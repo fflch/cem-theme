@@ -22,7 +22,7 @@
     </section>
 
       <!-- **** NOVO 2020 SLIDER DE QUOTES E LOCO CEM INIT **** -->
-    <div class="header-cem-new-slider-quotes">
+    <div class="header-cem-new-slider-quotes-second">
       <div class="quotes-slider">
         {{ drupal_view('frases', 'bloco', language) }}
       </div>
@@ -179,20 +179,18 @@
     <div class="inner wrapper">
       <div class="container-fluid">
         <div class="row">
+          <div class="col-md-5">
+            <div class="footer-newsletter-text">
+              {% trans %}
+                <span>RECEBA NOSSOS INFORMATIVOS</span><br> Não se preocupe, também não gostamos de SPAM.
+              {% endtrans %}
+            </div>
+          </div>
           <div class="col-md-7">
             <div class="footer-newsletter-form">
-
                 <div>
                   {{ drupal_entity('block','webform') }}
                 </div>
-
-            </div>
-          </div>
-          <div class="col-md-5">
-            <div class="footer-newsletter-text">
-                {% trans %}
-                  <span>RECEBA NOSSOS INFORMATIVOS</span><br> Não se preocupe, também não gostamos de SPAM.
-                {% endtrans %}
             </div>
           </div>
         </div>
