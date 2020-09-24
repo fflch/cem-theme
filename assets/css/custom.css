@@ -87,6 +87,8 @@ div.quem-somos-conteudo  a{
   /* line 3, cem/assets/scss/estilos-2.scss */
   .header-search {
     margin-left: auto;
+    display: flex;
+    align-items: center;
   }
 
   /* line 6, cem/assets/scss/estilos-2.scss */
@@ -129,8 +131,9 @@ div.quem-somos-conteudo  a{
   /* line 34, cem/assets/scss/estilos-2.scss */
   .logo-usp a {
     display: block;
-    width: 78%;
-    height: 78%;
+    width: 70%;
+    margin-top: 8px;
+    height: 70%;
     background: url(../img/logos/usp.png) center no-repeat;
     background-size: contain;
   }
@@ -138,13 +141,22 @@ div.quem-somos-conteudo  a{
   /* line 42, cem/assets/scss/estilos-2.scss */
   .header-cem-new-slider-quotes {
     width: 100%;
-   /*background-color: #ccc;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5px 15px;
   }
+
+.header-cem-new-slider-quotes-second {
+  width: 100%;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px;
+}
 
   /* line 51, cem/assets/scss/estilos-2.scss */
   .header-cem-new-slider-quotes .logo {
@@ -183,13 +195,13 @@ div.quem-somos-conteudo  a{
   }
 
   /* line 81, cem/assets/scss/estilos-2.scss */
-  .header-cem-new-slider-quotes .quotes-slider {
-    padding-top: 10px;
+  .header-cem-new-slider-quotes-second .quotes-slider {
+    /*padding-top: 10px;*/
     width: 100%;
   }
 
   /* line 85, cem/assets/scss/estilos-2.scss */
-  .header-cem-new-slider-quotes .quotes-slider .quote-item {
+  .header-cem-new-slider-quotes-second .quotes-slider .quote-item {
     outline: 0;
     width: 100%;
     text-align: center;
@@ -199,7 +211,7 @@ div.quem-somos-conteudo  a{
   }
 
   /* line 92, cem/assets/scss/estilos-2.scss */
-  .header-cem-new-slider-quotes .quotes-slider .quote-item p {
+  .header-cem-new-slider-quotes-second .quotes-slider .quote-item p {
     text-align: center;
     font-size: inherit;
     font-weight: inherit;
@@ -207,7 +219,7 @@ div.quem-somos-conteudo  a{
   }
 
   /* line 99, cem/assets/scss/estilos-2.scss */
-  .header-cem-new-slider-quotes .quotes-slider .slick-dots {
+  .header-cem-new-slider-quotes-second .quotes-slider .slick-dots {
     z-index: 5;
     padding: 0;
     margin: 0;
@@ -219,7 +231,7 @@ div.quem-somos-conteudo  a{
   }
 
   /* line 108, cem/assets/scss/estilos-2.scss */
-  .header-cem-new-slider-quotes .quotes-slider .slick-dots li {
+  .header-cem-new-slider-quotes-second .quotes-slider .slick-dots li {
     display: inline-block;
     width: 14px;
     height: 14px;
@@ -227,7 +239,7 @@ div.quem-somos-conteudo  a{
   }
 
   /* line 113, cem/assets/scss/estilos-2.scss */
-  .header-cem-new-slider-quotes .quotes-slider .slick-dots li button {
+  .header-cem-new-slider-quotes-second .quotes-slider .slick-dots li button {
     background: #fff;
     border: 0;
     border-radius: 50%;
@@ -240,7 +252,7 @@ div.quem-somos-conteudo  a{
   }
 
   /* line 123, cem/assets/scss/estilos-2.scss */
-  .header-cem-new-slider-quotes .quotes-slider .slick-dots li button:before {
+  .header-cem-new-slider-quotes-second .quotes-slider .slick-dots li button:before {
     content: "";
     display: block;
     width: 10px;
@@ -250,7 +262,7 @@ div.quem-somos-conteudo  a{
   }
 
   /* line 133, cem/assets/scss/estilos-2.scss */
-  .header-cem-new-slider-quotes .quotes-slider .slick-dots li.slick-active button {
+  .header-cem-new-slider-quotes-second .quotes-slider .slick-dots li.slick-active button {
     background-color: #086aab;
     background-color: #929292;
     border: 0;
@@ -258,7 +270,7 @@ div.quem-somos-conteudo  a{
   }
 
   /* line 138, cem/assets/scss/estilos-2.scss */
-  .header-cem-new-slider-quotes .quotes-slider .slick-dots li.slick-active button:before {
+  .header-cem-new-slider-quotes-second .quotes-slider .slick-dots li.slick-active button:before {
     background-color: #086aab;
     background-color: #929292;
     border: 0;
