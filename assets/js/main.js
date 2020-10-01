@@ -421,29 +421,44 @@
     }
 })(window, document, jQuery);
 (function(window, document, $) {
-    'use strict';
-    var $body = $('body');
-    var $headerMenu = $('.header-menu');
-    var $mobileHeaderMenuContainer = document.createElement('div');
-    var $mobileHeaderMenuTrigger = document.createElement('div');
-    var $mobileHeaderMenuTriggerInnerEl = document.createElement('span');
-    var $mobileHeaderMenuClose = document.createElement('div');
-    var $mobileHeaderMenuCloseInnerEl = document.createElement('span');
 
-    var $headerMenuItems = $('.header-menu .inner>ul>li');
+  var $body = $('body');
+  var $headerMenu = $('.header-menu');
+  var $mobileHeaderMenuContainer = document.createElement('div');
+  var $mobileHeaderMenuContainermobile = document.createElement('div');
+  var $mobilelink = document.createElement('a');
+  var $mobileHeaderMenuTrigger = document.createElement('div');
+  var $mobileHeaderMenuTriggerInnerEl = document.createElement('span');
+  var $mobileHeaderMenuClose = document.createElement('div');
+  var $mobileHeaderMenuCloseInnerEl = document.createElement('span');
 
-    $($mobileHeaderMenuTrigger).addClass('header-menu-mobile-trigger');
-    $($mobileHeaderMenuContainer).addClass('header-menu-mobile');
+  var $headerMenuItems = $('.header-menu .inner>ul>li');
 
-    $($mobileHeaderMenuTrigger).append($mobileHeaderMenuTriggerInnerEl);
-    $($mobileHeaderMenuContainer).append($mobileHeaderMenuTrigger);
+  $($mobileHeaderMenuTrigger).addClass('header-menu-mobile-trigger');
+  $($mobileHeaderMenuContainer).addClass('header-menu-mobile');
+  $($mobileHeaderMenuContainermobile).addClass('header-menu-mobile-usp');
 
-    $('header.header .header-top').append($mobileHeaderMenuContainer);
+  $($mobileHeaderMenuTrigger).append($mobileHeaderMenuTriggerInnerEl);
+  $($mobileHeaderMenuContainer).append($mobileHeaderMenuTrigger);
 
-    $($mobileHeaderMenuClose).append($mobileHeaderMenuCloseInnerEl);
-    $($mobileHeaderMenuClose).addClass('mobile-close')
-    $('.header-menu').append($mobileHeaderMenuClose);
+  $('header.header .header-top').append($mobileHeaderMenuContainer);
 
+  $('header.header .header-top').append($mobileHeaderMenuContainermobile);
+  $mobileHeaderMenuContainermobile.append($mobilelink);
+
+  $mobilelink.setAttribute('href', '//usp.br');
+
+  $($mobileHeaderMenuClose).append($mobileHeaderMenuCloseInnerEl);
+  $($mobileHeaderMenuClose).addClass('mobile-close');
+  $('.header-menu').append($mobileHeaderMenuClose);
+
+  $(window).resize(function() {
+    if (window.innerWidth >= 470) {
+      $('.title-for-mobile').hide();
+    } else {
+      $('.title-for-mobile').show();
+    }
+  });
 
     $($mobileHeaderMenuTrigger).on('click', function() {
         $($body).toggleClass('show-mobile-menu');
@@ -462,10 +477,9 @@
 
     function clearShowDropDown() {
         $($headerMenuItems).each(function() {
-            $(this).removeClass('show-drop-down-mobile')
+            $(this).removeClass('show-drop-down-mobile');
         });
-    };
-
+    }
 
     // get menu items
     $($headerMenuItems).each(function(index) {
