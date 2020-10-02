@@ -452,14 +452,6 @@
   $($mobileHeaderMenuClose).addClass('mobile-close');
   $('.header-menu').append($mobileHeaderMenuClose);
 
-  $(window).resize(function() {
-    if (window.innerWidth >= 470) {
-      $('.title-for-mobile').hide();
-    } else {
-      $('.title-for-mobile').show();
-    }
-  });
-
     $($mobileHeaderMenuTrigger).on('click', function() {
         $($body).toggleClass('show-mobile-menu');
         $headerMenu.removeClass('fade-out');

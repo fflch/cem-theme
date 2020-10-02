@@ -1234,6 +1234,7 @@ blockquote p {
   width: 100%;
   background-color: #ffffff;
   padding: 50px 0 0;
+  margin-top: 30px;
 }
 
 /* line 6, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
