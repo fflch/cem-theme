@@ -68,8 +68,10 @@ div.quem-somos-conteudo  a{
 /*
     Extends
 */
-/* line 244, cem/assets/scss/_helpers/_mixin.scss */
-.header-cem-new-slider-quotes .quotes-slider:before, .header-cem-new-slider-quotes .quotes-slider:after {
+
+@media only screen and (min-width: 471px) {
+  /* line 244, cem/assets/scss/_helpers/_mixin.scss */
+  .header-cem-new-slider-quotes .quotes-slider:before, .header-cem-new-slider-quotes .quotes-slider:after {
     content: " ";
     display: table;
   }
@@ -148,15 +150,15 @@ div.quem-somos-conteudo  a{
     padding: 5px 15px;
   }
 
-.header-cem-new-slider-quotes-second {
-  width: 100%;
-  background-color: #ccc;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5px 15px;
-}
+  .header-cem-new-slider-quotes-second {
+    width: 100%;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+  }
 
   /* line 51, cem/assets/scss/estilos-2.scss */
   .header-cem-new-slider-quotes .logo {
@@ -282,7 +284,98 @@ div.quem-somos-conteudo  a{
   }
 
   /*# sourceMappingURL=../../../sass */
-.main-title {
-  color: #052e70;
-  font-size: 36px;
+  .main-title {
+    color: #052e70;
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 470px) {
+
+  .home-slider-item div.title h2 {
+    padding-top:30px;
+  }
+
+  .header-cem-new-slider-quotes h1.logo .title {
+    display: none;
+  }
+
+  .text-for-mobile-div {
+    width: 100%;
+  }
+
+  .title-for-mobile:after {
+    margin: 10%;
+    color: #052e70;
+    font-size: 30px;
+    text-align: center;
+    content: "Centro de Estudos da Metrópole - CEM";
+    display: inherit;
+  }
+  .mobile-cem-logo {
+    min-height: 65px;
+    padding: 0 0 0 156px;
+    background: url(../img/logo-removebg.png) left center no-repeat;
+    background-size: 169px;
+    font-weight: normal;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 27%;
+    margin-top: 2%;
+  }
+
+  .header-top-links {
+    float: none;
+    background-color: #f5f5f5;
+  }
+
+  .header-search {
+    position: relative;
+    width: 100%;
+    max-height: 46px;
+    border-top: solid 1px #cbcbcb;
+}
+
+  .header-top-links .contact-translate {
+    width: 100%;
+    align-items: center;
+    padding: 5px;
+    margin-left: 1%;
+  }
+
+  .header-top-links .inner {
+    height: 40px;
+    display: contents;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+/* line 138, cem/assets/scss/_layout/_header/_header-top.scss */
+  .header-top-links .social {
+    display: none;
+  }
+
+  .main-title {
+    display: none;
+  }
+  .header-menu-mobile-usp a{
+    display: block;
+    background: url(../img/logos/usp.png) center no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    margin-top: -45px;
+    margin-left: 4px;
+    left: 0;
+    width: 65px;
+    height: 50px;
+  }
+
+}
+
+@media only screen and (min-width: 471px) and (max-width: 799px) {
+  .header-top-links .social {
+    display: none;
+  }
+
 }
