@@ -2,7 +2,7 @@ name: CEM Theme
 type: theme
 description: Custom theme
 core_version_requirement: ^8 || ^9
-base theme: 
+base theme: false
 libraries:
   - cem/bootstrap
   - cem/fontawesome
