@@ -13,21 +13,6 @@
       <!-- **** NOVO 2020 SLIDER DE QUOTES E LOCO CEM END **** -->
 
   <main role="main page-front">
-    <section class="container-fluid home-slider">
-      <div class="row">
-        <div class="col-lg-12 wrapper">
-          {{ drupal_view('slidershow', 'slidershow_bloco_home', language) }}
-        </div>
-      </div>
-    </section>
-
-      <!-- **** NOVO 2020 SLIDER DE QUOTES E LOCO CEM INIT **** -->
-    <div class="header-cem-new-slider-quotes-second">
-      <div class="quotes-slider">
-        {{ drupal_view('frases', 'bloco', language) }}
-      </div>
-    </div>
-    <!-- **** NOVO 2020 SLIDER DE QUOTES E LOCO CEM END **** -->
 
     <section class="home-call-boxes">
       <span class="detail-left"></span>
@@ -36,10 +21,8 @@
             {# drupal_entity('block', 'sidebar_left') #}
             {# drupal_entity('block', 'sidebar_right') #}
     </section>
-
-
-
     <!-- home call boxes end -->
+    
     <!-- home news and agenda init -->
     <div class="container-fluid home-news-and-agenda">
       <div class="row">
@@ -85,8 +68,26 @@
         </div>
       </div>
     </div>
-
     <!-- home news and agenda end -->
+    
+    <!-- **** NOVO 2020 SLIDER DE QUOTES E LOCO CEM INIT **** -->
+    <div class="header-cem-new-slider-quotes-second">
+      <div class="quotes-slider">
+        {{ drupal_view('frases', 'bloco', language) }}
+      </div>
+    </div>
+    <!-- **** NOVO 2020 SLIDER DE QUOTES E LOCO CEM END **** -->
+    
+    <!-- slidershow block home [Pesquisa, transferencia e Difusao] init -->
+    <section class="container-fluid home-slider">
+      <div class="row">
+        <div class="col-lg-12 wrapper">
+          {{ drupal_view('slidershow', 'slidershow_bloco_home', language) }}
+        </div>
+      </div>
+    </section>
+    <!-- slidershow block home end -->
+    
     <!-- home video and publications init -->
     <div class="container-fluid home-videos-and-publications">
       <div class="row">
