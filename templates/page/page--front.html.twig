@@ -55,7 +55,11 @@
                 </div>
                 <div class="home-agenda-box">
                   <!-- home agenda item init -->
-                  {{ drupal_view('evento','bloco_evento_home',language) }}
+                  <div class="agenda-slider-vertical">
+                      <div class="inner">
+                          {{ drupal_view('evento','bloco_evento_home',language) }}
+                      </div>
+                  </div>
                   <!-- home agenda item end -->
                     {% trans %}
                      <!-- <a href="/difusao-cientifica" class="link-more">mais eventos</a>-->

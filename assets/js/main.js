@@ -52,6 +52,23 @@
 })(window, document, jQuery);
 
 (function(window, document, $) {
+  "use strict";
+  if ($(".agenda-slider-vertical").length) {
+    $(".agenda-slider-vertical>.inner div.views-element-container > div").slick({
+      dots: false,
+      infinite: true,
+      speed: 400,
+      slidesToShow: 4,
+      vertical: true,
+      verticalSwiping: true,
+      arrows: true,
+      // rows: 4,
+      // slidesPerRow: 1
+    });
+  }
+})(window, document, jQuery);
+
+(function(window, document, $) {
     'use strict';
     if ($('.evento-fotos-slider-item').length) {
         //$('.home-publications div.home-publications-box>div.inner').slick({
