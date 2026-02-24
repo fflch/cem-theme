@@ -1,8 +1,8 @@
 name: CEM Theme
 type: theme
 description: Custom theme
-core_version_requirement: ^8 || ^9
-base theme: stable
+core_version_requirement: ^8 || ^9 || ^10
+base theme: stable9
 libraries:
   - cem/bootstrap
   - cem/fontawesome
