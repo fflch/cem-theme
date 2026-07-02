@@ -97,7 +97,7 @@
                     <div class="col-md-8 col-xs-12 quem-somos-conteudo-col">
                         {% if hierarquia == 'Quem somos' %}
                             <div class="quem-somos-conteudo">
-                                {{  drupal_field('field_page_descricao','node') }}
+                                {{  drupal_field('field_page_descricao','node', node.id) }}
                             </div>
                             <!-- quem somos main content end -->
                             <div class="row quem-somos-perfis-content">
@@ -105,21 +105,21 @@
                             </div>
                             {% if pesquisador  == 'Pesquisadores' %}
                                 <fieldset class="collapse-text-fieldset collapsible form-wrapper collapse-processed field_pos_doutorandos">
-                                    {{  drupal_field('field_pos_doutorandos','node') }}
+                                    {{  drupal_field('field_pos_doutorandos','node', node.id) }}
                                 </fieldset>
                                 <fieldset class="collapse-text-fieldset collapsible form-wrapper collapse-processed field_bolsistas_e_pesquisadores">
-                                    {{  drupal_field('field_bolsistas_e_pesquisadores','node') }}
+                                    {{  drupal_field('field_bolsistas_e_pesquisadores','node', node.id) }}
                                 </fieldset>
                                 <fieldset class="collapse-text-fieldset collapsible form-wrapper collapse-processed field_pesquisadores_associados">
-                                    {{  drupal_field('field_pesquisadores_associados','node') }}
+                                    {{  drupal_field('field_pesquisadores_associados','node', node.id) }}
                                 </fieldset>
                                 <fieldset class="collapse-text-fieldset collapsible form-wrapper collapse-processed field_pesquisadores_visitantes">
-                                    {{  drupal_field('field_pesquisadores_visitantes','node') }}
+                                    {{  drupal_field('field_pesquisadores_visitantes','node', node.id) }}
                                 </fieldset>
                             {% endif %}
                         {% elseif hierarquia == 'Pesquisa'  %}
                             <div class="quem-somos-conteudo">
-                                {{  drupal_field('field_page_descricao','node') }}
+                                {{  drupal_field('field_page_descricao','node', node.id) }}
                             </div>
                         {% elseif hierarquia == 'Publicações' %}
                             <div class="header-search publicoes-search">
@@ -131,14 +131,14 @@
                                     </form>-->
                             </div>
                             <div class="quem-somos-conteudo">
-                                {{  drupal_field('field_page_descricao','node') }}
+                                {{  drupal_field('field_page_descricao','node', node.id) }}
                             </div>
                             <div class="publicacoes-livro-grid">
                                 {{ drupal_view('publicacoes',tipo_publicacao) }}
                             </div>
                         {% elseif hierarquia == 'Downloads de dados' %}
                             <div class="quem-somos-conteudo">
-                                {{  drupal_field('field_page_descricao','node') }}
+                                {{  drupal_field('field_page_descricao','node', node.id) }}
                             </div>
                         {% elseif hierarquia == 'Difusão Científica' %}
                             {% if difusao_cientifica == 'Agenda' %}
@@ -173,7 +173,7 @@
                                 </div>
                             {% else %}
                                 <div class="quem-somos-conteudo">
-                                    {{  drupal_field('field_page_descricao','node') }}
+                                    {{  drupal_field('field_page_descricao','node', node.id) }}
                                 </div>
                             {% endif %}
                         {% endif %}
