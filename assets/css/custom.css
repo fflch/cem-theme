@@ -163,11 +163,11 @@ div.quem-somos-conteudo  a{
   /* line 51, cem/assets/scss/estilos-2.scss */
   .header-cem-new-slider-quotes .logo {
     float: left;
-    min-height: 65px;
-    margin: 0;
-    padding: 0 0 0 156px;
-    background: url(../img/logo-removebg.png) left center no-repeat;
-    background-size: 169px;
+    min-height: 100px;
+    margin: 0 0px;
+    padding: 0 0 0 300px;
+    background: url(../img/CEM_LOGO_COMPLETO_HOR.png) center no-repeat;
+    background-size: 250px;
     font-weight: normal;
     display: flex;
     flex-direction: column;
@@ -179,11 +179,11 @@ div.quem-somos-conteudo  a{
   .header-cem-new-slider-quotes .logo span.title {
     display: block;
     width: 100%;
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
+    font-family: "Zalando Sans", sans-serif;
+    font-weight: 600;
     font-size: 30px;
     line-height: 30px;
-    color: #303030;
+    color: #3057B7;
   }
 
   /* line 73, cem/assets/scss/estilos-2.scss */
@@ -308,20 +308,20 @@ div.quem-somos-conteudo  a{
     color: #052e70;
     font-size: 30px;
     text-align: center;
-    content: "Centro de Estudos da Metrópole - CEM";
+    content: "Centro de Estudos da Metrópole - CEM/USP";
     display: inherit;
   }
   .mobile-cem-logo {
-    min-height: 65px;
-    padding: 0 0 0 156px;
-    background: url(../img/logo-removebg.png) left center no-repeat;
+    min-height: 100px;
+    padding: 0 0 0 0px;
+    background: url(../img/logo-removebg.png) center no-repeat;
     background-size: 169px;
     font-weight: normal;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-left: 27%;
-    margin-top: 2%;
+    #margin-left: 29%;
+    #margin-top: 2%;
   }
 
   .header-top-links {
@@ -360,14 +360,14 @@ div.quem-somos-conteudo  a{
   }
   .header-menu-mobile-usp a{
     display: block;
-    background: url(../img/logos/usp.png) center no-repeat;
+    background: url(../img/logos/usp.png) left center no-repeat;
     background-size: contain;
     position: absolute;
     top: 50%;
-    margin-top: -45px;
+    margin-top: -58px;
     margin-left: 4px;
     left: 0;
-    width: 65px;
+    width: 80px;
     height: 50px;
   }
 
