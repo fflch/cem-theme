@@ -2,13 +2,123 @@
 /**
 * Implements hook_blog_preprocess_html().
 */
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Url;
 use Drupal\taxonomy\Entity\Term;
+
+// ============================================================================
+// Contorno para o CDN da FFLCH
+//
+// Os arquivos do site ficam em cdn.fflch.usp.br/centrodametropole/public/...,
+// mas o Drupal no servidor gera as URLs sem o "public/"
+// (ex.: .../centrodametropole/user_files/x.png), o que resulta em 404.
+// As funcoes abaixo inserem o "public/" nas URLs que o tema exibe. Se a
+// configuracao do servidor for corrigida, a regex deixa de casar e nada muda.
+// ============================================================================
+
+const CEM_CDN_REGEX = '#(//cdn\.fflch\.usp\.br/centrodametropole/)(?!public/)#';
+
+/**
+ * Insere "public/" em toda URL do CDN do site que nao o tenha.
+ */
+function _cem_fix_cdn_url(string $text): string {
+  $fixed = preg_replace(CEM_CDN_REGEX, '$1public/', $text);
+  return $fixed === NULL ? $text : $fixed;
+}
 
 /**
  * Gera a URL absoluta de um arquivo a partir do seu URI (ex.: public://...).
  */
 function _cem_file_url(string $uri): string {
-  return \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+  return _cem_fix_cdn_url(\Drupal::service('file_url_generator')->generateAbsoluteString($uri));
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for image.
+ *
+ * Cobre imagens de campos e de estilos de imagem (views, home, slideshow etc.).
+ */
+function cem_preprocess_image(&$variables) {
+  foreach (['src', 'srcset'] as $attr) {
+    if (isset($variables['attributes'][$attr]) && is_string($variables['attributes'][$attr])) {
+      $variables['attributes'][$attr] = _cem_fix_cdn_url($variables['attributes'][$attr]);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for file_link.
+ *
+ * Cobre links de campos de arquivo (anexos, PDFs).
+ */
+function cem_preprocess_file_link(&$variables) {
+  if (!isset($variables['link'])) {
+    return;
+  }
+  $link = $variables['link'];
+  if (is_array($link) && isset($link['#url']) && $link['#url'] instanceof Url && $link['#url']->isExternal()) {
+    $uri = $link['#url']->getUri();
+    $fixed = _cem_fix_cdn_url($uri);
+    if ($fixed !== $uri) {
+      $variables['link']['#url'] = Url::fromUri($fixed, $link['#url']->getOptions());
+    }
+  }
+  elseif (is_string($link) || (is_object($link) && method_exists($link, '__toString'))) {
+    $variables['link'] = Markup::create(_cem_fix_cdn_url((string) $link));
+  }
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ *
+ * Cobre o favicon e demais <link> do <head>.
+ */
+function cem_page_attachments_alter(array &$attachments) {
+  if (empty($attachments['#attached']['html_head_link'])) {
+    return;
+  }
+  foreach ($attachments['#attached']['html_head_link'] as &$head_link) {
+    if (isset($head_link[0]['href']) && is_string($head_link[0]['href'])) {
+      $head_link[0]['href'] = _cem_fix_cdn_url($head_link[0]['href']);
+    }
+  }
+}
+
+/**
+ * Implements hook_css_alter().
+ *
+ * Cobre CSS gravado em public:// (ex.: asset_injector).
+ */
+function cem_css_alter(array &$css, $assets = NULL) {
+  _cem_fix_cdn_assets($css);
+}
+
+/**
+ * Implements hook_js_alter().
+ *
+ * Cobre JS gravado em public:// (ex.: traducoes em languages/).
+ */
+function cem_js_alter(array &$javascript, $assets = NULL) {
+  _cem_fix_cdn_assets($javascript);
+}
+
+/**
+ * Aponta assets de public:// para a URL correta do CDN.
+ */
+function _cem_fix_cdn_assets(array &$items) {
+  foreach ($items as &$item) {
+    if (!isset($item['data']) || !is_string($item['data'])) {
+      continue;
+    }
+    if (strpos($item['data'], 'public://') === 0) {
+      $item['data']       = _cem_file_url($item['data']);
+      $item['type']       = 'external';
+      $item['preprocess'] = FALSE;
+    }
+    elseif (($item['type'] ?? '') === 'external') {
+      $item['data'] = _cem_fix_cdn_url($item['data']);
+    }
+  }
 }
 
 function cem_preprocess_html(&$variables) {
