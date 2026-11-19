@@ -80,11 +80,13 @@ function cem_preprocess_node(&$variables) {
       }
     }
   }
-  if($tipo == 'pessoas') {
-    $tid = $variables['node']->get('field_pesquisadores')
-      ->getValue()[0]['target_id'];
-    $variables['pesquisadores'] = Term::load($tid)->getName();
-    $variables['term_url']      = Term::load($tid)->url();
+  if($tipo == 'pessoas' && !$variables['node']->get('field_pesquisadores')->isEmpty()) {
+    $tid  = $variables['node']->get('field_pesquisadores')->target_id;
+    $term = Term::load($tid);
+    if($term) {
+      $variables['pesquisadores'] = $term->getName();
+      $variables['term_url']      = $term->toUrl()->toString();
+    }
   }
   if($tipo == 'page') {
     $url  = $_SERVER['REQUEST_URI'];
