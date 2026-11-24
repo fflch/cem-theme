@@ -60,37 +60,38 @@
     set sectionClass = ''
   %}
 
-  {% if  ('/quem-somos' in bodyUrl) %}
+  {# Aliases em inglês: /en/<secao>/... (ver padrões de URL do Pathauto) #}
+  {% if  ('/quem-somos' in bodyUrl) or (bodyUrl matches '{^/en/about-us(/|$)}') %}
 
   {%
     set sectionClass = 'section-quem-somos'
   %}
 
-  {% elseif  ('/pesquisa' in bodyUrl) %}
+  {% elseif  ('/pesquisa' in bodyUrl) or (bodyUrl matches '{^/en/research(/|$)}') %}
 
   {%
     set sectionClass = 'section-pesquisa'
   %}
 
-  {% elseif  ('/publicacoes' in bodyUrl) %}
+  {% elseif  ('/publicacoes' in bodyUrl) or (bodyUrl matches '{^/en/publications(/|$)}') %}
 
   {%
     set sectionClass = 'section-publicacoes'
   %}
 
-  {% elseif  ('/download-de-dados' in bodyUrl) or ('/controle-acesso' in bodyUrl) or ('mapas-prontos' in bodyUrl) or ('downloads-de-dados' in bodyUrl) %}
+  {% elseif  ('/download-de-dados' in bodyUrl) or ('/controle-acesso' in bodyUrl) or ('mapas-prontos' in bodyUrl) or ('downloads-de-dados' in bodyUrl) or (bodyUrl matches '{^/en/transference-and-data(/|$)}') %}
 
   {%
     set sectionClass = 'section-download-de-dados section-transferência-e-dados'
   %}
 
-  {% elseif  ('/difusao-cientifica' in bodyUrl) or ('/agenda-semanal' in bodyUrl) or ('/node/45' in bodyUrl) or ('/cem-na-midia' in bodyUrl) or ('/noticias' or bodyUrl)%}
+  {% elseif  ('/difusao-cientifica' in bodyUrl) or ('/agenda' in bodyUrl) or ('/node/45' in bodyUrl) or ('/cem-na-midia' in bodyUrl) or ('/noticia' in bodyUrl) or ('/video' in bodyUrl) or (bodyUrl matches '{^/en/(scientific-diffusion|news|schedule)(/|$)}') %}
 
   {%
     set sectionClass = 'section-difusao-cientifica'
   %}
 
-  {% elseif  ('/sistemas-interativos' in bodyUrl) or ('/difusao-cientifica/research-briefing' in bodyUrl) %}
+  {% elseif  ('/sistemas-interativos' in bodyUrl) or (bodyUrl matches '{^/en/interactive-systems(/|$)}') %}
 
   {%
     set sectionClass = 'section-sistemas-interativos'

@@ -1,4 +1,6 @@
-{% set hierarquia         = content['field_hierarquia'][0]['#title'] %}
+{# Nome original (pt-br) do termo, independente do idioma da página #}
+{% set hierarquia_term    = node.field_hierarquia.entity %}
+{% set hierarquia         = hierarquia_term ? hierarquia_term.getUntranslated().label() : '' %}
 {% set pesquisador        = content['field_pesquisadores'][0]['#title'] %}
 {% set difusao_cientifica = content['field_difusao_cientifica'][0]['#title'] %}
 {% set pesquisador_id     = node.get('field_pesquisadores').getValue()[0]['target_id'] %}
